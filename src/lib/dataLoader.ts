@@ -114,7 +114,7 @@ export async function getAvailableLanguages(): Promise<string[]> {
     for (const filename of filesToCheck) {
       try {
         // Try HEAD first (cheap) then GET fallback if HEAD unsupported
-        const url = `/analysis/${lang}/${filename}`;
+        const url = `${process.env.PUBLIC_URL}/analysis/${lang}/${filename}`;
         let response = await fetch(url, {
           method: 'HEAD',
           headers: { 'Accept': 'text/csv,*/*;q=0.1' },
@@ -171,7 +171,7 @@ export async function loadLanguageData(language: string): Promise<LanguageData> 
 
   for (const filename of possibleFiles) {
     try {
-      const url = `/analysis/${language}/${filename}`;
+      const url = `${process.env.PUBLIC_URL}/analysis/${language}/${filename}`;
       const response = await fetch(url);
 
       if (response.ok) {
