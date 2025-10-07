@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+yemba,Affordable and Clean Energy,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Affordable and Clean Energy,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Affordable and Clean Energy,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Affordable and Clean Energy,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Clean Water and Sanitation,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Clean Water and Sanitation,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Clean Water and Sanitation,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Clean Water and Sanitation,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Climate Action,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Climate Action,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Climate Action,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Climate Action,gpt-4o-2024-11-20,5,1.2,1.0,0.0,0.0,100.0
+yemba,Climate Action,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Crime and Law,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Crime and Law,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Crime and Law,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Crime and Law,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Crime and Law,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Culture,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Culture,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Culture,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Culture,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Culture,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Decent Work and Economic Growth,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Decent Work and Economic Growth,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Decent Work and Economic Growth,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Disasters and Accidents,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Disasters and Accidents,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Disasters and Accidents,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Disasters and Accidents,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Disasters and Accidents,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Entertainment,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Entertainment,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Entertainment,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Entertainment,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Entertainment,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Environment,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Environment,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Environment,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Environment,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Environment,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Gender Equality,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Gender Equality,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Gender Equality,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Gender Equality,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Gender Equality,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Global Partnerships,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Global Partnerships,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Global Partnerships,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Global Partnerships,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Global Partnerships,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Good Health and Well-Being,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Good Health and Well-Being,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Good Health and Well-Being,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Good Health and Well-Being,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Good Health and Well-Being,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Health,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Health,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Health,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Health,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Health,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,History,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,History,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,History,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,History,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,History,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Hunger and Food Security,claude-sonnet-4-20250514,5,1.0,1.2,0.0,0.0,100.0
+yemba,Hunger and Food Security,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Hunger and Food Security,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Hunger and Food Security,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Hunger and Food Security,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Industry and Infrastructure,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Industry and Infrastructure,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Industry and Infrastructure,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Industry and Infrastructure,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Industry and Infrastructure,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Marine Conservation (Life Below Water),gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Marine Conservation (Life Below Water),gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Peace and Justice,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Peace and Justice,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Peace and Justice,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Peace and Justice,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Peace and Justice,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Politics,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Politics,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Politics,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Politics,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Politics,gpt-5-2025-08-07,5,1.2,1.0,0.0,0.0,100.0
+yemba,Poverty Eradication,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Poverty Eradication,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Poverty Eradication,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Poverty Eradication,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Poverty Eradication,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Quality Education,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Quality Education,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Quality Education,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Quality Education,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Quality Education,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Reducing Inequality,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Reducing Inequality,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Reducing Inequality,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Reducing Inequality,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Reducing Inequality,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Responsible Consumption,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Responsible Consumption,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Responsible Consumption,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Responsible Consumption,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Responsible Consumption,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Safety,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Safety,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Safety,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Safety,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Safety,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Science and Technology,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Science and Technology,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Science and Technology,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Science and Technology,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Science and Technology,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sports,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sports,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sports,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sports,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sports,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sustainable Cities,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sustainable Cities,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sustainable Cities,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sustainable Cities,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Sustainable Cities,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Terrestrial Ecosystems (Life on Land),gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Tourism,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Tourism,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Tourism,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Tourism,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Tourism,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Travel,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Travel,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Travel,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Travel,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Travel,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+yemba,Weather,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+yemba,Weather,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+yemba,Weather,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+yemba,Weather,gpt-4o-2024-11-20,5,1.0,1.0,0.0,0.0,100.0
+yemba,Weather,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0

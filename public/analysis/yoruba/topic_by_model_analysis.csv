@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+yoruba,Affordable and Clean Energy,claude-3-5-sonnet-20241022,5,6.8,6.8,100.0,100.0,0.0
+yoruba,Affordable and Clean Energy,claude-sonnet-4-20250514,5,6.0,6.6,100.0,80.0,60.0
+yoruba,Affordable and Clean Energy,gemini-2.5-pro,5,6.4,6.6,100.0,100.0,40.0
+yoruba,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,5.6,3.8,100.0,40.0,100.0
+yoruba,Affordable and Clean Energy,gpt-5-2025-08-07,5,5.6,5.2,60.0,60.0,60.0
+yoruba,Clean Water and Sanitation,claude-3-5-sonnet-20241022,5,6.8,6.6,100.0,100.0,20.0
+yoruba,Clean Water and Sanitation,claude-sonnet-4-20250514,5,5.4,5.2,60.0,100.0,80.0
+yoruba,Clean Water and Sanitation,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,20.0
+yoruba,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,6.2,6.0,60.0,100.0,40.0
+yoruba,Clean Water and Sanitation,gpt-5-2025-08-07,5,6.6,6.6,80.0,80.0,40.0
+yoruba,Climate Action,claude-3-5-sonnet-20241022,5,6.4,5.8,100.0,100.0,40.0
+yoruba,Climate Action,claude-sonnet-4-20250514,5,6.4,6.0,100.0,100.0,20.0
+yoruba,Climate Action,gemini-2.5-pro,5,6.6,6.8,100.0,100.0,0.0
+yoruba,Climate Action,gpt-4.1-2025-04-14,5,5.8,5.2,80.0,80.0,60.0
+yoruba,Climate Action,gpt-5-2025-08-07,5,5.8,6.0,80.0,60.0,60.0
+yoruba,Crime and Law,claude-3-5-sonnet-20241022,5,6.6,7.0,100.0,100.0,20.0
+yoruba,Crime and Law,claude-sonnet-4-20250514,5,5.6,4.6,40.0,100.0,80.0
+yoruba,Crime and Law,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Crime and Law,gpt-4.1-2025-04-14,5,6.2,5.2,100.0,100.0,60.0
+yoruba,Crime and Law,gpt-5-2025-08-07,5,6.4,6.6,100.0,100.0,20.0
+yoruba,Culture,claude-3-5-sonnet-20241022,5,6.0,5.8,100.0,100.0,40.0
+yoruba,Culture,claude-sonnet-4-20250514,5,6.2,5.6,80.0,80.0,60.0
+yoruba,Culture,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,20.0
+yoruba,Culture,gpt-4.1-2025-04-14,5,6.0,6.0,60.0,80.0,60.0
+yoruba,Culture,gpt-5-2025-08-07,5,6.2,6.8,100.0,80.0,20.0
+yoruba,Decent Work and Economic Growth,claude-3-5-sonnet-20241022,5,6.8,6.8,80.0,100.0,20.0
+yoruba,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,6.0,6.2,100.0,100.0,60.0
+yoruba,Decent Work and Economic Growth,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+yoruba,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,6.0,5.6,100.0,100.0,60.0
+yoruba,Decent Work and Economic Growth,gpt-5-2025-08-07,5,6.4,6.6,100.0,80.0,20.0
+yoruba,Disasters and Accidents,claude-3-5-sonnet-20241022,5,6.4,6.4,80.0,100.0,40.0
+yoruba,Disasters and Accidents,claude-sonnet-4-20250514,5,5.6,5.4,60.0,80.0,60.0
+yoruba,Disasters and Accidents,gemini-2.5-pro,5,6.2,5.8,100.0,100.0,60.0
+yoruba,Disasters and Accidents,gpt-4.1-2025-04-14,5,5.8,5.8,80.0,80.0,80.0
+yoruba,Disasters and Accidents,gpt-5-2025-08-07,5,5.2,4.8,40.0,60.0,100.0
+yoruba,Entertainment,claude-3-5-sonnet-20241022,5,6.6,6.4,100.0,100.0,20.0
+yoruba,Entertainment,claude-sonnet-4-20250514,5,6.2,5.0,100.0,80.0,40.0
+yoruba,Entertainment,gemini-2.5-pro,5,6.6,6.6,100.0,60.0,40.0
+yoruba,Entertainment,gpt-4.1-2025-04-14,5,6.8,6.6,100.0,100.0,0.0
+yoruba,Entertainment,gpt-5-2025-08-07,5,6.4,6.4,100.0,80.0,40.0
+yoruba,Environment,claude-3-5-sonnet-20241022,5,5.0,4.8,60.0,100.0,40.0
+yoruba,Environment,claude-sonnet-4-20250514,5,5.6,4.6,80.0,100.0,80.0
+yoruba,Environment,gemini-2.5-pro,5,6.6,6.0,100.0,100.0,40.0
+yoruba,Environment,gpt-4.1-2025-04-14,5,5.4,4.8,40.0,100.0,60.0
+yoruba,Environment,gpt-5-2025-08-07,5,6.2,6.6,100.0,100.0,20.0
+yoruba,Gender Equality,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+yoruba,Gender Equality,claude-sonnet-4-20250514,5,5.6,4.0,80.0,80.0,80.0
+yoruba,Gender Equality,gemini-2.5-pro,5,6.2,6.6,80.0,100.0,20.0
+yoruba,Gender Equality,gpt-4.1-2025-04-14,5,6.2,5.4,100.0,100.0,60.0
+yoruba,Gender Equality,gpt-5-2025-08-07,5,6.2,6.2,100.0,100.0,40.0
+yoruba,Global Partnerships,claude-3-5-sonnet-20241022,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Global Partnerships,claude-sonnet-4-20250514,5,6.6,6.8,100.0,100.0,20.0
+yoruba,Global Partnerships,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Global Partnerships,gpt-4.1-2025-04-14,5,4.6,4.2,80.0,40.0,80.0
+yoruba,Global Partnerships,gpt-5-2025-08-07,5,6.4,5.8,60.0,80.0,60.0
+yoruba,Good Health and Well-Being,claude-3-5-sonnet-20241022,5,6.4,6.4,100.0,100.0,40.0
+yoruba,Good Health and Well-Being,claude-sonnet-4-20250514,5,6.2,4.8,100.0,100.0,60.0
+yoruba,Good Health and Well-Being,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Good Health and Well-Being,gpt-4.1-2025-04-14,5,5.4,5.8,100.0,80.0,20.0
+yoruba,Good Health and Well-Being,gpt-5-2025-08-07,5,6.6,6.6,100.0,100.0,20.0
+yoruba,Health,claude-3-5-sonnet-20241022,5,6.4,5.8,100.0,80.0,40.0
+yoruba,Health,claude-sonnet-4-20250514,5,6.6,6.2,60.0,100.0,60.0
+yoruba,Health,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+yoruba,Health,gpt-4.1-2025-04-14,5,4.6,3.4,80.0,80.0,80.0
+yoruba,Health,gpt-5-2025-08-07,5,5.8,6.2,100.0,80.0,40.0
+yoruba,History,claude-3-5-sonnet-20241022,5,6.8,6.8,100.0,100.0,20.0
+yoruba,History,claude-sonnet-4-20250514,5,6.0,6.4,100.0,100.0,20.0
+yoruba,History,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+yoruba,History,gpt-4.1-2025-04-14,5,6.0,5.6,80.0,100.0,60.0
+yoruba,History,gpt-5-2025-08-07,5,5.8,4.8,100.0,80.0,80.0
+yoruba,Hunger and Food Security,claude-3-5-sonnet-20241022,5,5.8,6.0,80.0,80.0,40.0
+yoruba,Hunger and Food Security,claude-sonnet-4-20250514,5,6.0,5.8,100.0,100.0,60.0
+yoruba,Hunger and Food Security,gemini-2.5-pro,5,6.6,6.4,80.0,80.0,40.0
+yoruba,Hunger and Food Security,gpt-4.1-2025-04-14,5,4.0,3.4,80.0,60.0,80.0
+yoruba,Hunger and Food Security,gpt-5-2025-08-07,5,6.6,6.4,100.0,100.0,20.0
+yoruba,Industry and Infrastructure,claude-3-5-sonnet-20241022,5,6.4,6.6,100.0,100.0,20.0
+yoruba,Industry and Infrastructure,claude-sonnet-4-20250514,5,6.4,5.8,80.0,100.0,40.0
+yoruba,Industry and Infrastructure,gemini-2.5-pro,5,6.4,6.4,100.0,80.0,40.0
+yoruba,Industry and Infrastructure,gpt-4.1-2025-04-14,5,6.2,6.6,80.0,100.0,20.0
+yoruba,Industry and Infrastructure,gpt-5-2025-08-07,5,6.0,6.4,80.0,80.0,40.0
+yoruba,Marine Conservation (Life Below Water),claude-3-5-sonnet-20241022,5,6.4,6.2,100.0,100.0,40.0
+yoruba,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,5.6,4.2,80.0,100.0,80.0
+yoruba,Marine Conservation (Life Below Water),gemini-2.5-pro,5,6.8,6.6,100.0,100.0,0.0
+yoruba,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,4.2,3.4,60.0,40.0,80.0
+yoruba,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,6.0,5.4,100.0,80.0,60.0
+yoruba,Peace and Justice,claude-3-5-sonnet-20241022,5,6.6,6.6,80.0,100.0,20.0
+yoruba,Peace and Justice,claude-sonnet-4-20250514,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Peace and Justice,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,40.0
+yoruba,Peace and Justice,gpt-4.1-2025-04-14,5,5.4,5.2,80.0,100.0,60.0
+yoruba,Peace and Justice,gpt-5-2025-08-07,5,6.4,6.6,80.0,100.0,20.0
+yoruba,Politics,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+yoruba,Politics,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,20.0
+yoruba,Politics,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,20.0
+yoruba,Politics,gpt-4.1-2025-04-14,5,5.4,4.6,80.0,40.0,80.0
+yoruba,Politics,gpt-5-2025-08-07,5,6.4,6.8,80.0,100.0,20.0
+yoruba,Poverty Eradication,claude-3-5-sonnet-20241022,5,6.8,6.4,100.0,100.0,20.0
+yoruba,Poverty Eradication,claude-sonnet-4-20250514,5,6.0,4.4,80.0,100.0,100.0
+yoruba,Poverty Eradication,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+yoruba,Poverty Eradication,gpt-4.1-2025-04-14,5,4.0,3.0,40.0,40.0,80.0
+yoruba,Poverty Eradication,gpt-5-2025-08-07,5,6.2,5.6,80.0,60.0,60.0
+yoruba,Quality Education,claude-3-5-sonnet-20241022,5,5.8,4.8,60.0,80.0,60.0
+yoruba,Quality Education,claude-sonnet-4-20250514,5,6.8,6.8,80.0,100.0,20.0
+yoruba,Quality Education,gemini-2.5-pro,5,6.0,5.6,100.0,100.0,40.0
+yoruba,Quality Education,gpt-4.1-2025-04-14,5,6.2,4.8,100.0,80.0,80.0
+yoruba,Quality Education,gpt-5-2025-08-07,5,6.2,5.8,80.0,80.0,60.0
+yoruba,Reducing Inequality,claude-3-5-sonnet-20241022,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Reducing Inequality,claude-sonnet-4-20250514,5,6.6,7.0,100.0,100.0,0.0
+yoruba,Reducing Inequality,gemini-2.5-pro,5,6.4,7.0,100.0,100.0,0.0
+yoruba,Reducing Inequality,gpt-4.1-2025-04-14,5,5.2,4.4,100.0,80.0,80.0
+yoruba,Reducing Inequality,gpt-5-2025-08-07,5,5.4,5.6,80.0,100.0,40.0
+yoruba,Responsible Consumption,claude-3-5-sonnet-20241022,5,5.8,4.6,80.0,80.0,80.0
+yoruba,Responsible Consumption,claude-sonnet-4-20250514,5,6.4,6.6,100.0,100.0,20.0
+yoruba,Responsible Consumption,gemini-2.5-pro,5,6.0,5.8,100.0,80.0,40.0
+yoruba,Responsible Consumption,gpt-4.1-2025-04-14,5,3.8,2.8,20.0,60.0,80.0
+yoruba,Responsible Consumption,gpt-5-2025-08-07,5,5.2,4.6,40.0,40.0,80.0
+yoruba,Safety,claude-3-5-sonnet-20241022,5,6.6,6.0,80.0,100.0,60.0
+yoruba,Safety,claude-sonnet-4-20250514,5,6.0,5.8,80.0,100.0,40.0
+yoruba,Safety,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+yoruba,Safety,gpt-4.1-2025-04-14,5,4.8,4.4,80.0,60.0,80.0
+yoruba,Safety,gpt-5-2025-08-07,5,6.2,5.8,100.0,60.0,80.0
+yoruba,Science and Technology,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,20.0
+yoruba,Science and Technology,claude-sonnet-4-20250514,5,6.4,6.2,80.0,100.0,20.0
+yoruba,Science and Technology,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+yoruba,Science and Technology,gpt-4.1-2025-04-14,5,6.6,6.0,100.0,100.0,20.0
+yoruba,Science and Technology,gpt-5-2025-08-07,5,6.4,6.0,100.0,100.0,40.0
+yoruba,Sports,claude-3-5-sonnet-20241022,5,6.8,6.2,100.0,100.0,40.0
+yoruba,Sports,claude-sonnet-4-20250514,5,6.2,4.8,100.0,100.0,40.0
+yoruba,Sports,gemini-2.5-pro,5,6.8,6.6,100.0,100.0,20.0
+yoruba,Sports,gpt-4.1-2025-04-14,5,5.0,4.0,60.0,100.0,80.0
+yoruba,Sports,gpt-5-2025-08-07,5,6.0,6.2,80.0,100.0,60.0
+yoruba,Sustainable Cities,claude-3-5-sonnet-20241022,5,6.4,5.8,80.0,80.0,40.0
+yoruba,Sustainable Cities,claude-sonnet-4-20250514,5,6.2,6.2,80.0,80.0,20.0
+yoruba,Sustainable Cities,gemini-2.5-pro,5,6.2,5.6,100.0,80.0,40.0
+yoruba,Sustainable Cities,gpt-4.1-2025-04-14,5,3.8,3.8,40.0,80.0,100.0
+yoruba,Sustainable Cities,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,20.0
+yoruba,Terrestrial Ecosystems (Life on Land),claude-3-5-sonnet-20241022,5,6.8,7.0,100.0,100.0,20.0
+yoruba,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,6.2,6.0,80.0,100.0,60.0
+yoruba,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+yoruba,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,5.6,5.0,80.0,100.0,80.0
+yoruba,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,6.4,6.0,100.0,100.0,40.0
+yoruba,Tourism,claude-3-5-sonnet-20241022,5,6.4,6.4,100.0,100.0,40.0
+yoruba,Tourism,claude-sonnet-4-20250514,5,6.4,6.4,100.0,100.0,40.0
+yoruba,Tourism,gemini-2.5-pro,5,6.4,6.8,100.0,80.0,40.0
+yoruba,Tourism,gpt-4.1-2025-04-14,5,4.4,3.4,60.0,60.0,100.0
+yoruba,Tourism,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+yoruba,Travel,claude-3-5-sonnet-20241022,5,5.2,4.4,100.0,100.0,60.0
+yoruba,Travel,claude-sonnet-4-20250514,5,6.6,5.8,100.0,100.0,40.0
+yoruba,Travel,gemini-2.5-pro,5,6.8,6.2,100.0,100.0,20.0
+yoruba,Travel,gpt-4.1-2025-04-14,5,4.6,4.6,60.0,80.0,60.0
+yoruba,Travel,gpt-5-2025-08-07,5,6.6,6.2,60.0,80.0,40.0
+yoruba,Weather,claude-3-5-sonnet-20241022,5,5.8,5.2,80.0,100.0,60.0
+yoruba,Weather,claude-sonnet-4-20250514,5,6.6,6.0,100.0,100.0,60.0
+yoruba,Weather,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+yoruba,Weather,gpt-4.1-2025-04-14,5,4.0,3.6,40.0,100.0,80.0
+yoruba,Weather,gpt-5-2025-08-07,5,6.0,4.0,60.0,100.0,80.0

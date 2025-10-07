@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+twi,Affordable and Clean Energy,claude-3-5-sonnet-20241022,5,7.0,5.8,100.0,80.0,20.0
+twi,Affordable and Clean Energy,claude-sonnet-4-20250514,5,6.4,6.2,60.0,100.0,40.0
+twi,Affordable and Clean Energy,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,5.2,5.6,60.0,0.0,40.0
+twi,Affordable and Clean Energy,gpt-5-2025-08-07,5,7.0,7.0,100.0,40.0,0.0
+twi,Clean Water and Sanitation,claude-3-5-sonnet-20241022,5,5.2,5.2,40.0,100.0,60.0
+twi,Clean Water and Sanitation,claude-sonnet-4-20250514,5,6.4,6.0,80.0,80.0,60.0
+twi,Clean Water and Sanitation,gemini-2.5-pro,5,6.6,6.8,80.0,100.0,20.0
+twi,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,5.2,5.2,60.0,100.0,40.0
+twi,Clean Water and Sanitation,gpt-5-2025-08-07,5,6.8,6.8,80.0,60.0,20.0
+twi,Climate Action,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Climate Action,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Climate Action,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Climate Action,gpt-4.1-2025-04-14,5,6.2,6.4,80.0,100.0,20.0
+twi,Climate Action,gpt-5-2025-08-07,5,6.2,5.0,80.0,80.0,40.0
+twi,Crime and Law,claude-3-5-sonnet-20241022,5,6.4,5.8,80.0,100.0,20.0
+twi,Crime and Law,claude-sonnet-4-20250514,5,7.0,5.8,100.0,100.0,40.0
+twi,Crime and Law,gemini-2.5-pro,5,6.2,6.2,80.0,100.0,20.0
+twi,Crime and Law,gpt-4.1-2025-04-14,5,6.2,5.2,80.0,100.0,60.0
+twi,Crime and Law,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Culture,claude-3-5-sonnet-20241022,5,6.2,6.4,80.0,100.0,40.0
+twi,Culture,claude-sonnet-4-20250514,5,6.4,5.8,80.0,100.0,40.0
+twi,Culture,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Culture,gpt-4.1-2025-04-14,5,6.6,6.8,80.0,100.0,20.0
+twi,Culture,gpt-5-2025-08-07,5,6.6,6.4,80.0,100.0,20.0
+twi,Decent Work and Economic Growth,claude-3-5-sonnet-20241022,5,6.8,6.2,100.0,100.0,20.0
+twi,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,7.0,6.8,80.0,100.0,20.0
+twi,Decent Work and Economic Growth,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,7.0,7.0,100.0,100.0,0.0
+twi,Decent Work and Economic Growth,gpt-5-2025-08-07,5,7.0,7.0,100.0,80.0,0.0
+twi,Disasters and Accidents,claude-3-5-sonnet-20241022,5,6.0,6.2,80.0,100.0,20.0
+twi,Disasters and Accidents,claude-sonnet-4-20250514,5,6.0,6.0,80.0,80.0,20.0
+twi,Disasters and Accidents,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+twi,Disasters and Accidents,gpt-4.1-2025-04-14,5,6.0,6.0,80.0,100.0,40.0
+twi,Disasters and Accidents,gpt-5-2025-08-07,5,7.0,7.0,100.0,80.0,0.0
+twi,Entertainment,claude-3-5-sonnet-20241022,5,6.4,6.2,80.0,80.0,20.0
+twi,Entertainment,claude-sonnet-4-20250514,5,6.8,6.8,80.0,60.0,20.0
+twi,Entertainment,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Entertainment,gpt-4.1-2025-04-14,5,5.4,5.6,60.0,60.0,40.0
+twi,Entertainment,gpt-5-2025-08-07,5,6.4,6.0,60.0,20.0,40.0
+twi,Environment,claude-3-5-sonnet-20241022,5,5.8,5.6,80.0,100.0,40.0
+twi,Environment,claude-sonnet-4-20250514,5,6.2,6.2,100.0,100.0,20.0
+twi,Environment,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,20.0
+twi,Environment,gpt-4.1-2025-04-14,5,4.6,4.6,60.0,100.0,40.0
+twi,Environment,gpt-5-2025-08-07,5,6.6,6.0,80.0,80.0,40.0
+twi,Gender Equality,claude-3-5-sonnet-20241022,5,6.6,6.6,80.0,100.0,20.0
+twi,Gender Equality,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Gender Equality,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Gender Equality,gpt-4.1-2025-04-14,5,6.6,6.4,80.0,100.0,20.0
+twi,Gender Equality,gpt-5-2025-08-07,5,6.6,6.6,80.0,100.0,20.0
+twi,Global Partnerships,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Global Partnerships,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Global Partnerships,gemini-2.5-pro,5,6.4,6.4,80.0,100.0,20.0
+twi,Global Partnerships,gpt-4.1-2025-04-14,5,5.6,5.6,40.0,60.0,60.0
+twi,Global Partnerships,gpt-5-2025-08-07,5,6.8,6.8,80.0,80.0,20.0
+twi,Good Health and Well-Being,claude-3-5-sonnet-20241022,5,6.2,6.2,80.0,80.0,20.0
+twi,Good Health and Well-Being,claude-sonnet-4-20250514,5,6.6,6.6,80.0,100.0,20.0
+twi,Good Health and Well-Being,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Good Health and Well-Being,gpt-4.1-2025-04-14,5,6.0,4.6,40.0,60.0,60.0
+twi,Good Health and Well-Being,gpt-5-2025-08-07,5,6.6,6.6,80.0,100.0,20.0
+twi,Health,claude-3-5-sonnet-20241022,5,6.6,5.8,80.0,100.0,40.0
+twi,Health,claude-sonnet-4-20250514,5,6.2,6.2,80.0,100.0,20.0
+twi,Health,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Health,gpt-4.1-2025-04-14,5,5.8,5.8,80.0,100.0,20.0
+twi,Health,gpt-5-2025-08-07,5,6.4,6.6,80.0,80.0,20.0
+twi,History,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,History,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,History,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,History,gpt-4.1-2025-04-14,5,4.6,4.6,40.0,100.0,60.0
+twi,History,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Hunger and Food Security,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Hunger and Food Security,claude-sonnet-4-20250514,5,6.8,6.4,80.0,80.0,20.0
+twi,Hunger and Food Security,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Hunger and Food Security,gpt-4.1-2025-04-14,5,5.6,5.4,60.0,100.0,60.0
+twi,Hunger and Food Security,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Industry and Infrastructure,claude-3-5-sonnet-20241022,5,7.0,6.0,100.0,20.0,0.0
+twi,Industry and Infrastructure,claude-sonnet-4-20250514,5,7.0,6.8,100.0,80.0,20.0
+twi,Industry and Infrastructure,gemini-2.5-pro,5,7.0,7.0,100.0,80.0,0.0
+twi,Industry and Infrastructure,gpt-4.1-2025-04-14,5,5.6,5.4,80.0,100.0,20.0
+twi,Industry and Infrastructure,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Marine Conservation (Life Below Water),claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,80.0,20.0
+twi,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,7.0,6.8,100.0,80.0,20.0
+twi,Marine Conservation (Life Below Water),gemini-2.5-pro,5,7.0,7.0,100.0,60.0,0.0
+twi,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,6.8,6.6,80.0,100.0,20.0
+twi,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,7.0,7.0,100.0,80.0,20.0
+twi,Peace and Justice,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Peace and Justice,claude-sonnet-4-20250514,5,6.6,6.6,80.0,100.0,20.0
+twi,Peace and Justice,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,20.0
+twi,Peace and Justice,gpt-4.1-2025-04-14,5,6.4,5.2,80.0,100.0,40.0
+twi,Peace and Justice,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Politics,claude-3-5-sonnet-20241022,5,6.0,6.0,80.0,100.0,60.0
+twi,Politics,claude-sonnet-4-20250514,5,7.0,6.8,100.0,80.0,20.0
+twi,Politics,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Politics,gpt-4.1-2025-04-14,5,6.2,5.6,80.0,100.0,40.0
+twi,Politics,gpt-5-2025-08-07,5,6.2,6.0,80.0,60.0,20.0
+twi,Poverty Eradication,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Poverty Eradication,claude-sonnet-4-20250514,5,6.6,6.2,60.0,100.0,40.0
+twi,Poverty Eradication,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Poverty Eradication,gpt-4.1-2025-04-14,5,5.6,5.4,60.0,100.0,40.0
+twi,Poverty Eradication,gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,20.0
+twi,Quality Education,claude-3-5-sonnet-20241022,5,6.8,6.4,80.0,60.0,40.0
+twi,Quality Education,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Quality Education,gemini-2.5-pro,5,6.8,6.4,80.0,100.0,20.0
+twi,Quality Education,gpt-4.1-2025-04-14,5,6.4,6.4,60.0,100.0,40.0
+twi,Quality Education,gpt-5-2025-08-07,5,6.8,6.8,80.0,100.0,20.0
+twi,Reducing Inequality,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Reducing Inequality,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Reducing Inequality,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Reducing Inequality,gpt-4.1-2025-04-14,5,6.8,5.8,80.0,80.0,40.0
+twi,Reducing Inequality,gpt-5-2025-08-07,5,5.8,6.0,60.0,100.0,40.0
+twi,Responsible Consumption,claude-3-5-sonnet-20241022,5,7.0,6.2,100.0,100.0,20.0
+twi,Responsible Consumption,claude-sonnet-4-20250514,5,7.0,7.0,100.0,80.0,0.0
+twi,Responsible Consumption,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,20.0
+twi,Responsible Consumption,gpt-4.1-2025-04-14,5,5.0,5.2,60.0,100.0,40.0
+twi,Responsible Consumption,gpt-5-2025-08-07,5,6.8,6.0,100.0,100.0,20.0
+twi,Safety,claude-3-5-sonnet-20241022,5,7.0,6.2,80.0,20.0,40.0
+twi,Safety,claude-sonnet-4-20250514,5,7.0,7.0,100.0,60.0,0.0
+twi,Safety,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Safety,gpt-4.1-2025-04-14,5,5.8,5.6,60.0,100.0,40.0
+twi,Safety,gpt-5-2025-08-07,5,6.2,6.0,80.0,40.0,20.0
+twi,Science and Technology,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,60.0,0.0
+twi,Science and Technology,claude-sonnet-4-20250514,5,7.0,7.0,100.0,80.0,0.0
+twi,Science and Technology,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Science and Technology,gpt-4.1-2025-04-14,5,6.2,6.4,80.0,80.0,20.0
+twi,Science and Technology,gpt-5-2025-08-07,5,7.0,7.0,100.0,40.0,0.0
+twi,Sports,claude-3-5-sonnet-20241022,5,7.0,6.2,100.0,80.0,40.0
+twi,Sports,claude-sonnet-4-20250514,5,6.0,6.0,80.0,40.0,40.0
+twi,Sports,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,40.0
+twi,Sports,gpt-4.1-2025-04-14,5,7.0,7.0,100.0,60.0,0.0
+twi,Sports,gpt-5-2025-08-07,5,7.0,6.8,80.0,40.0,40.0
+twi,Sustainable Cities,claude-3-5-sonnet-20241022,5,6.6,6.2,80.0,40.0,20.0
+twi,Sustainable Cities,claude-sonnet-4-20250514,5,6.4,6.2,80.0,100.0,20.0
+twi,Sustainable Cities,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,20.0
+twi,Sustainable Cities,gpt-4.1-2025-04-14,5,6.2,5.4,80.0,100.0,40.0
+twi,Sustainable Cities,gpt-5-2025-08-07,5,7.0,6.2,100.0,100.0,20.0
+twi,Terrestrial Ecosystems (Life on Land),claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,20.0
+twi,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+twi,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,5.4,5.0,40.0,100.0,60.0
+twi,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+twi,Tourism,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,60.0,0.0
+twi,Tourism,claude-sonnet-4-20250514,5,6.6,6.8,80.0,100.0,20.0
+twi,Tourism,gemini-2.5-pro,5,6.4,6.0,80.0,100.0,20.0
+twi,Tourism,gpt-4.1-2025-04-14,5,6.6,6.6,80.0,80.0,20.0
+twi,Tourism,gpt-5-2025-08-07,5,7.0,6.2,80.0,60.0,20.0
+twi,Travel,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+twi,Travel,claude-sonnet-4-20250514,5,6.6,6.6,80.0,80.0,40.0
+twi,Travel,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,40.0
+twi,Travel,gpt-4.1-2025-04-14,5,5.2,5.4,40.0,80.0,60.0
+twi,Travel,gpt-5-2025-08-07,5,7.0,7.0,100.0,80.0,0.0
+twi,Weather,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,20.0
+twi,Weather,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+twi,Weather,gemini-2.5-pro,5,5.0,5.0,40.0,100.0,60.0
+twi,Weather,gpt-4.1-2025-04-14,5,6.0,6.2,80.0,100.0,20.0
+twi,Weather,gpt-5-2025-08-07,5,5.6,5.6,60.0,80.0,60.0
