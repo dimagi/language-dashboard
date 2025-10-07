@@ -1,0 +1,6 @@
+model,n_samples,readability_mean,readability_median,readability_ci_low,readability_ci_high,adequacy_mean,adequacy_median,adequacy_ci_low,adequacy_ci_high,grammatically_correct_pct,real_words_pct,notable_error_pct
+claude-sonnet-4-20250514,155,1.0,1.0,1.0,1.0,1.0064516129032257,1.0,0.9937065286566075,1.019196697149844,0.0,0.0,100.0
+gemini-2.5-pro,155,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,100.0
+gpt-4.1-2025-04-14,155,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,100.0
+gpt-4o-2024-11-20,155,1.0064516129032257,1.0,0.9937065286566075,1.019196697149844,1.0,1.0,1.0,1.0,0.0,0.0,100.0
+gpt-5-2025-08-07,155,1.0064516129032257,1.0,0.9937065286566075,1.019196697149844,1.0,1.0,1.0,1.0,0.0,0.0,100.0

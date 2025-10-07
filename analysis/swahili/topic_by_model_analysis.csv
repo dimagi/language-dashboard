@@ -1,0 +1,125 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+swahili,Affordable and Clean Energy,claude-sonnet-4-20250514,5,6.0,6.4,80.0,60.0,40.0
+swahili,Affordable and Clean Energy,gemini-2.5-pro,5,6.4,6.4,100.0,100.0,0.0
+swahili,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,6.6,6.4,80.0,100.0,60.0
+swahili,Affordable and Clean Energy,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,0.0
+swahili,Clean Water and Sanitation,claude-sonnet-4-20250514,5,5.0,5.4,40.0,100.0,60.0
+swahili,Clean Water and Sanitation,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+swahili,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,6.4,6.6,100.0,100.0,40.0
+swahili,Clean Water and Sanitation,gpt-5-2025-08-07,5,6.0,6.8,60.0,100.0,40.0
+swahili,Climate Action,claude-sonnet-4-20250514,5,6.6,6.4,80.0,100.0,20.0
+swahili,Climate Action,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+swahili,Climate Action,gpt-4.1-2025-04-14,5,6.8,7.0,100.0,100.0,0.0
+swahili,Climate Action,gpt-5-2025-08-07,5,5.8,6.0,60.0,100.0,60.0
+swahili,Crime and Law,claude-sonnet-4-20250514,5,5.8,6.4,80.0,80.0,40.0
+swahili,Crime and Law,gemini-2.5-pro,5,6.6,6.8,80.0,100.0,20.0
+swahili,Crime and Law,gpt-4.1-2025-04-14,5,6.8,7.0,100.0,100.0,20.0
+swahili,Crime and Law,gpt-5-2025-08-07,5,5.8,6.2,40.0,100.0,80.0
+swahili,Culture,claude-sonnet-4-20250514,5,6.0,6.2,60.0,100.0,40.0
+swahili,Culture,gemini-2.5-pro,5,6.4,6.8,80.0,100.0,20.0
+swahili,Culture,gpt-4.1-2025-04-14,5,6.8,6.8,100.0,100.0,20.0
+swahili,Culture,gpt-5-2025-08-07,5,6.6,6.8,80.0,60.0,40.0
+swahili,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,6.4,6.6,60.0,100.0,40.0
+swahili,Decent Work and Economic Growth,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+swahili,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,6.6,6.8,100.0,100.0,20.0
+swahili,Decent Work and Economic Growth,gpt-5-2025-08-07,5,6.8,7.0,100.0,100.0,20.0
+swahili,Disasters and Accidents,claude-sonnet-4-20250514,5,6.0,6.2,60.0,100.0,40.0
+swahili,Disasters and Accidents,gemini-2.5-pro,5,6.8,7.0,80.0,100.0,20.0
+swahili,Disasters and Accidents,gpt-4.1-2025-04-14,5,5.4,6.0,60.0,80.0,60.0
+swahili,Disasters and Accidents,gpt-5-2025-08-07,5,6.2,6.4,60.0,100.0,40.0
+swahili,Entertainment,claude-sonnet-4-20250514,5,5.6,6.0,40.0,80.0,60.0
+swahili,Entertainment,gemini-2.5-pro,5,6.2,6.6,60.0,100.0,40.0
+swahili,Entertainment,gpt-4.1-2025-04-14,5,6.0,6.4,100.0,100.0,40.0
+swahili,Entertainment,gpt-5-2025-08-07,5,6.2,6.6,60.0,60.0,40.0
+swahili,Environment,claude-sonnet-4-20250514,5,6.4,6.2,80.0,100.0,40.0
+swahili,Environment,gemini-2.5-pro,5,6.2,6.6,60.0,80.0,60.0
+swahili,Environment,gpt-4.1-2025-04-14,5,6.6,6.4,80.0,100.0,20.0
+swahili,Environment,gpt-5-2025-08-07,5,6.4,6.6,80.0,100.0,40.0
+swahili,Gender Equality,claude-sonnet-4-20250514,5,6.4,6.8,80.0,100.0,20.0
+swahili,Gender Equality,gemini-2.5-pro,5,6.6,6.8,80.0,100.0,20.0
+swahili,Gender Equality,gpt-4.1-2025-04-14,5,6.4,7.0,80.0,100.0,20.0
+swahili,Gender Equality,gpt-5-2025-08-07,5,5.8,6.2,60.0,100.0,60.0
+swahili,Global Partnerships,claude-sonnet-4-20250514,5,6.8,6.8,100.0,100.0,20.0
+swahili,Global Partnerships,gemini-2.5-pro,5,6.6,6.6,100.0,100.0,0.0
+swahili,Global Partnerships,gpt-4.1-2025-04-14,5,6.2,6.4,60.0,100.0,60.0
+swahili,Global Partnerships,gpt-5-2025-08-07,5,6.6,6.8,100.0,80.0,0.0
+swahili,Good Health and Well-Being,claude-sonnet-4-20250514,5,6.4,6.6,60.0,100.0,40.0
+swahili,Good Health and Well-Being,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+swahili,Good Health and Well-Being,gpt-4.1-2025-04-14,5,6.6,6.6,80.0,100.0,20.0
+swahili,Good Health and Well-Being,gpt-5-2025-08-07,5,6.0,6.0,60.0,100.0,60.0
+swahili,Health,claude-sonnet-4-20250514,5,6.8,7.0,100.0,100.0,0.0
+swahili,Health,gemini-2.5-pro,5,5.6,6.2,40.0,100.0,80.0
+swahili,Health,gpt-4.1-2025-04-14,5,6.2,6.4,60.0,100.0,40.0
+swahili,Health,gpt-5-2025-08-07,5,6.2,6.6,60.0,100.0,40.0
+swahili,History,claude-sonnet-4-20250514,5,5.6,5.6,60.0,100.0,60.0
+swahili,History,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,20.0
+swahili,History,gpt-4.1-2025-04-14,5,6.6,7.0,80.0,100.0,20.0
+swahili,History,gpt-5-2025-08-07,5,6.6,6.4,100.0,80.0,20.0
+swahili,Hunger and Food Security,claude-sonnet-4-20250514,5,6.2,6.4,80.0,100.0,20.0
+swahili,Hunger and Food Security,gemini-2.5-pro,5,6.6,6.6,80.0,100.0,20.0
+swahili,Hunger and Food Security,gpt-4.1-2025-04-14,5,5.8,6.4,60.0,100.0,60.0
+swahili,Hunger and Food Security,gpt-5-2025-08-07,5,6.0,6.6,60.0,100.0,40.0
+swahili,Industry and Infrastructure,claude-sonnet-4-20250514,5,6.4,6.6,100.0,100.0,40.0
+swahili,Industry and Infrastructure,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,20.0
+swahili,Industry and Infrastructure,gpt-4.1-2025-04-14,5,6.8,7.0,80.0,100.0,20.0
+swahili,Industry and Infrastructure,gpt-5-2025-08-07,5,6.2,6.4,60.0,100.0,40.0
+swahili,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,6.2,6.2,80.0,80.0,40.0
+swahili,Marine Conservation (Life Below Water),gemini-2.5-pro,5,6.2,6.6,80.0,100.0,20.0
+swahili,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,6.4,6.6,60.0,100.0,40.0
+swahili,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,6.0,6.2,80.0,100.0,60.0
+swahili,Peace and Justice,claude-sonnet-4-20250514,5,6.6,6.6,80.0,80.0,20.0
+swahili,Peace and Justice,gemini-2.5-pro,5,6.6,6.8,80.0,100.0,20.0
+swahili,Peace and Justice,gpt-4.1-2025-04-14,5,6.8,7.0,100.0,100.0,0.0
+swahili,Peace and Justice,gpt-5-2025-08-07,5,5.8,6.0,40.0,80.0,80.0
+swahili,Politics,claude-sonnet-4-20250514,5,6.4,6.4,80.0,100.0,20.0
+swahili,Politics,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+swahili,Politics,gpt-4.1-2025-04-14,5,6.8,6.6,80.0,100.0,20.0
+swahili,Politics,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+swahili,Poverty Eradication,claude-sonnet-4-20250514,5,5.4,6.0,60.0,100.0,40.0
+swahili,Poverty Eradication,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,20.0
+swahili,Poverty Eradication,gpt-4.1-2025-04-14,5,6.6,6.4,60.0,100.0,60.0
+swahili,Poverty Eradication,gpt-5-2025-08-07,5,6.4,6.2,60.0,100.0,40.0
+swahili,Quality Education,claude-sonnet-4-20250514,5,6.8,6.8,100.0,100.0,0.0
+swahili,Quality Education,gemini-2.5-pro,5,6.4,6.4,80.0,100.0,20.0
+swahili,Quality Education,gpt-4.1-2025-04-14,5,6.8,6.6,80.0,100.0,20.0
+swahili,Quality Education,gpt-5-2025-08-07,5,6.0,6.2,80.0,100.0,40.0
+swahili,Reducing Inequality,claude-sonnet-4-20250514,5,5.6,5.8,80.0,100.0,40.0
+swahili,Reducing Inequality,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+swahili,Reducing Inequality,gpt-4.1-2025-04-14,5,6.0,6.6,60.0,100.0,60.0
+swahili,Reducing Inequality,gpt-5-2025-08-07,5,6.4,6.4,60.0,100.0,40.0
+swahili,Responsible Consumption,claude-sonnet-4-20250514,5,5.6,6.2,80.0,100.0,40.0
+swahili,Responsible Consumption,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+swahili,Responsible Consumption,gpt-4.1-2025-04-14,5,6.0,6.2,80.0,100.0,40.0
+swahili,Responsible Consumption,gpt-5-2025-08-07,5,5.6,5.8,80.0,100.0,80.0
+swahili,Safety,claude-sonnet-4-20250514,5,6.6,6.4,60.0,100.0,40.0
+swahili,Safety,gemini-2.5-pro,5,5.4,6.2,80.0,100.0,40.0
+swahili,Safety,gpt-4.1-2025-04-14,5,6.4,6.4,80.0,100.0,20.0
+swahili,Safety,gpt-5-2025-08-07,5,5.2,5.6,40.0,100.0,60.0
+swahili,Science and Technology,claude-sonnet-4-20250514,5,6.4,6.4,80.0,100.0,40.0
+swahili,Science and Technology,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+swahili,Science and Technology,gpt-4.1-2025-04-14,5,6.6,6.6,80.0,80.0,20.0
+swahili,Science and Technology,gpt-5-2025-08-07,5,5.4,6.0,40.0,100.0,80.0
+swahili,Sports,claude-sonnet-4-20250514,5,6.6,6.4,60.0,100.0,40.0
+swahili,Sports,gemini-2.5-pro,5,5.8,5.6,40.0,100.0,60.0
+swahili,Sports,gpt-4.1-2025-04-14,5,6.6,6.8,100.0,80.0,0.0
+swahili,Sports,gpt-5-2025-08-07,5,6.0,6.6,60.0,80.0,40.0
+swahili,Sustainable Cities,claude-sonnet-4-20250514,5,6.2,6.6,80.0,100.0,20.0
+swahili,Sustainable Cities,gemini-2.5-pro,5,6.6,6.6,100.0,100.0,20.0
+swahili,Sustainable Cities,gpt-4.1-2025-04-14,5,6.8,7.0,100.0,100.0,0.0
+swahili,Sustainable Cities,gpt-5-2025-08-07,5,5.6,5.2,40.0,100.0,80.0
+swahili,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,6.0,6.0,80.0,100.0,40.0
+swahili,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,6.2,6.6,60.0,100.0,40.0
+swahili,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,6.8,6.8,60.0,100.0,40.0
+swahili,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,4.6,5.8,40.0,100.0,80.0
+swahili,Tourism,claude-sonnet-4-20250514,5,6.0,6.6,60.0,80.0,40.0
+swahili,Tourism,gemini-2.5-pro,5,6.8,6.8,80.0,100.0,20.0
+swahili,Tourism,gpt-4.1-2025-04-14,5,6.4,6.4,80.0,100.0,40.0
+swahili,Tourism,gpt-5-2025-08-07,5,5.6,5.8,40.0,100.0,60.0
+swahili,Travel,claude-sonnet-4-20250514,5,6.4,6.4,80.0,100.0,40.0
+swahili,Travel,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+swahili,Travel,gpt-4.1-2025-04-14,5,6.6,6.6,60.0,100.0,40.0
+swahili,Travel,gpt-5-2025-08-07,5,5.8,6.0,20.0,100.0,80.0
+swahili,Weather,claude-sonnet-4-20250514,5,5.4,6.2,20.0,100.0,80.0
+swahili,Weather,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+swahili,Weather,gpt-4.1-2025-04-14,5,6.0,6.4,60.0,100.0,40.0
+swahili,Weather,gpt-5-2025-08-07,5,5.2,6.0,20.0,100.0,80.0
