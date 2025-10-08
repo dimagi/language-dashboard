@@ -27,22 +27,22 @@ export interface LanguageGroup {
 export const LANGUAGE_GROUPS: LanguageGroup[] = [
   {
     name: "East African",
-    languages: ["amharic", "swahili", "tigrinya", "luo"],
+    languages: ["amharic", "swahili", "luo"],
     color: "#3B82F6"
   },
   {
     name: "West African",
-    languages: ["yoruba", "igbo", "hausa", "kanuri", "twi", "wolof", "yemba"],
+    languages: ["yoruba", "hausa", "kanuri", "twi", "wolof", "yemba"],
     color: "#EF4444"
   },
   {
     name: "Southern African",
-    languages: ["zulu", "xhosa", "afrikaans", "chichewa"],
+    languages: ["chichewa"],
     color: "#10B981"
   },
   {
     name: "Central African",
-    languages: ["lingala", "luganda", "ewondo"],
+    languages: ["luganda", "ewondo"],
     color: "#F59E0B"
   }
 ];
@@ -104,7 +104,7 @@ async function looksLikeCsv(response: Response): Promise<boolean> {
 }
 export async function getAvailableLanguages(): Promise<string[]> {
   const knownLanguages = [
-    'amharic','chichewa','ewondo','hausa','kanuri','luganda','luo','swahili','twi','wolof','tigrinya','yoruba','igbo','zulu','xhosa','afrikaans','lingala','yemba'
+    'amharic', 'chichewa', 'ewondo', 'hausa', 'kanuri', 'luganda', 'luo', 'swahili', 'twi', 'wolof', 'yoruba', 'yemba'
   ];
   const availableLanguages: string[] = [];
 
@@ -164,10 +164,14 @@ export async function getAvailableLanguages(): Promise<string[]> {
   return availableLanguages;
 }
 
-export async function loadLanguageData(language: string): Promise<LanguageData> {
-  const possibleFiles = [
-    'primary_reviewer_model_performance.csv'
-  ];
+export type ReviewerType = 'primary' | 'secondary';
+
+export async function loadLanguageData(language: string, reviewer: ReviewerType = 'primary'): Promise<LanguageData> {
+  const filename = reviewer === 'primary'
+    ? 'primary_reviewer_model_performance.csv'
+    : 'secondary_reviewer_model_performance.csv';
+
+  const possibleFiles = [filename];
 
   for (const filename of possibleFiles) {
     try {
@@ -218,10 +222,10 @@ export async function loadLanguageData(language: string): Promise<LanguageData> 
   throw new Error(`No data files found for language: ${language}`);
 }
 
-export async function loadAllLanguageData(): Promise<LanguageData[]> {
+export async function loadAllLanguageData(reviewer: ReviewerType = 'primary'): Promise<LanguageData[]> {
   try {
     const availableLanguages = await getAvailableLanguages();
-    const languageDataPromises = availableLanguages.map(lang => loadLanguageData(lang));
+    const languageDataPromises = availableLanguages.map(lang => loadLanguageData(lang, reviewer));
     const results = await Promise.allSettled(languageDataPromises);
 
     const successfulResults = results

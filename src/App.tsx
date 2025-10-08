@@ -7,20 +7,27 @@ import {
   calculateModelLeaderboard,
   LanguageData,
   LANGUAGE_GROUPS,
-  MODEL_DISPLAY_NAMES
+  MODEL_DISPLAY_NAMES,
+  ReviewerType
 } from './lib/dataLoader';
 import { Globe, TrendingUp, Users, Database } from 'lucide-react';
 
 function App() {
   const [languageData, setLanguageData] = useState<LanguageData[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(true);
+  const [switching, setSwitching] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [reviewer, setReviewer] = useState<ReviewerType>('primary');
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        setLoading(true);
-        const data = await loadAllLanguageData();
+        if (initialLoading) {
+          setInitialLoading(true);
+        } else {
+          setSwitching(true);
+        }
+        const data = await loadAllLanguageData(reviewer);
         setLanguageData(data);
         setError(null);
       } catch (err) {
@@ -28,12 +35,13 @@ function App() {
         setError(errorMessage);
         console.error('Error loading data:', err);
       } finally {
-        setLoading(false);
+        setInitialLoading(false);
+        setSwitching(false);
       }
     };
 
     loadData();
-  }, []);
+  }, [reviewer]);
 
   const leaderboard = React.useMemo(() => {
     if (languageData.length === 0) return [];
@@ -46,7 +54,7 @@ function App() {
     );
   }, [languageData]);
 
-  if (loading) {
+  if (initialLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -92,14 +100,45 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <Database className="h-4 w-4" />
-                <span>{totalSamples.toLocaleString()} samples</span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 bg-muted rounded-lg p-1 relative">
+                <button
+                  onClick={() => setReviewer('primary')}
+                  disabled={switching}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    reviewer === 'primary'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  } disabled:opacity-50`}
+                >
+                  Primary Reviewer
+                </button>
+                <button
+                  onClick={() => setReviewer('secondary')}
+                  disabled={switching}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    reviewer === 'secondary'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  } disabled:opacity-50`}
+                >
+                  Secondary Reviewer
+                </button>
+                {switching && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-muted/50 rounded-lg">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+                  </div>
+                )}
               </div>
-              <div className="flex items-center gap-1">
-                <Users className="h-4 w-4" />
-                <span>{languageData.length} languages</span>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <Database className="h-4 w-4" />
+                  <span>{totalSamples.toLocaleString()} samples</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Users className="h-4 w-4" />
+                  <span>{languageData.length} languages</span>
+                </div>
               </div>
             </div>
           </div>
