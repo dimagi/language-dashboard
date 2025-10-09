@@ -307,7 +307,67 @@ export function calculateModelLeaderboard(languageData: LanguageData[]): Array<{
 }
 
 export function getLanguageGroupForLanguage(language: string): LanguageGroup | undefined {
-  return LANGUAGE_GROUPS.find(group => 
+  return LANGUAGE_GROUPS.find(group =>
     group.languages.includes(language.toLowerCase())
   );
+}
+
+export interface WinnerStats {
+  model: string;
+  languagesWon: number;
+  totalLanguages: number;
+  winningLanguages: string[];
+}
+
+export function calculateWinner(languageData: LanguageData[]): WinnerStats | null {
+  if (languageData.length === 0) return null;
+
+  // For each language, find the best model by combined score
+  const winsByModel = new Map<string, string[]>();
+
+  languageData.forEach(langData => {
+    let bestModel = '';
+    let bestScore = -Infinity;
+
+    langData.models.forEach(model => {
+      // Skip previous winners
+      if (PREVIOUS_WINNERS.has(model.model)) return;
+
+      const score = model.readability_mean + model.adequacy_mean * 0.5;
+      if (score > bestScore) {
+        bestScore = score;
+        bestModel = model.model;
+      }
+    });
+
+    if (bestModel) {
+      const displayName = getDisplayModelName(bestModel);
+      if (!winsByModel.has(displayName)) {
+        winsByModel.set(displayName, []);
+      }
+      winsByModel.get(displayName)!.push(langData.language);
+    }
+  });
+
+  // Find the model with the most wins
+  let winnerModel = '';
+  let maxWins = 0;
+  let winningLanguages: string[] = [];
+
+  winsByModel.forEach((languages, model) => {
+    if (languages.length > maxWins) {
+      maxWins = languages.length;
+      winnerModel = model;
+      winningLanguages = languages;
+    }
+  });
+
+  if (!winnerModel) return null;
+
+  return {
+    model: winnerModel,
+    languagesWon: maxWins,
+    totalLanguages: languageData.length,
+    winningLanguages
+  };
 }

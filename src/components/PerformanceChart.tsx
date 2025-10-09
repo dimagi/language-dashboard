@@ -502,22 +502,24 @@ export default function PerformanceChart(props: PerformanceChartProps) {
   return (
     <div style={{ width: '100%' }}>
       {/* Metric Selector */}
-      <div className="mb-4">
-        <div className="text-sm font-medium text-gray-700 mb-3">Select Metric:</div>
-        <div className="flex flex-wrap gap-2">
+      <div className="mb-6">
+        <div className="flex gap-8 border-b border-gray-200">
           {Object.entries(METRICS_CONFIG).map(([key, config]) => {
             const isActive = currentSelectedMetric === key;
             return (
               <button
                 key={key}
                 onClick={() => setSelectedMetric(key as MetricKey)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 cursor-pointer transform ${
+                className={`pb-3 text-base font-medium transition-colors cursor-pointer relative ${
                   isActive
-                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg scale-105 ring-2 ring-blue-300'
-                    : 'bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-300 hover:scale-102'
+                    ? 'text-blue-600'
+                    : 'text-gray-600 hover:text-gray-800'
                 }`}
               >
                 {config.label}
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-600"></div>
+                )}
               </button>
             );
           })}
@@ -537,7 +539,7 @@ export default function PerformanceChart(props: PerformanceChartProps) {
                   <button
                     key={group.name}
                     onClick={() => toggleLanguageGroup(group.name)}
-                    className={`px-3 py-1 text-sm rounded-md border transition-colors cursor-pointer ${
+                    className={`px-3 py-1.5 text-sm rounded-sm border transition-colors cursor-pointer ${
                       isHidden
                         ? 'bg-gray-100 text-gray-400 border-gray-300 line-through hover:bg-gray-200'
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
@@ -567,7 +569,7 @@ export default function PerformanceChart(props: PerformanceChartProps) {
                 <button
                   key={lang}
                   onClick={() => toggleLanguage(lang)}
-                  className={`px-3 py-1 text-sm rounded-md border transition-colors cursor-pointer ${
+                  className={`px-3 py-1.5 text-sm rounded-sm border transition-colors cursor-pointer ${
                     isHidden
                       ? 'bg-gray-100 text-gray-400 border-gray-300 line-through hover:bg-gray-200'
                       : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'

@@ -5,12 +5,13 @@ import ModelLeaderboard from './components/ModelLeaderboard';
 import {
   loadAllLanguageData,
   calculateModelLeaderboard,
+  calculateWinner,
   LanguageData,
   LANGUAGE_GROUPS,
   MODEL_DISPLAY_NAMES,
   ReviewerType
 } from './lib/dataLoader';
-import { Globe, TrendingUp, Users, Database } from 'lucide-react';
+import { Globe, TrendingUp, Users, Database, Trophy } from 'lucide-react';
 
 function App() {
   const [languageData, setLanguageData] = useState<LanguageData[]>([]);
@@ -48,8 +49,12 @@ function App() {
     return calculateModelLeaderboard(languageData);
   }, [languageData]);
 
+  const winner = React.useMemo(() => {
+    return calculateWinner(languageData);
+  }, [languageData]);
+
   const totalSamples = React.useMemo(() => {
-    return languageData.reduce((total, lang) => 
+    return languageData.reduce((total, lang) =>
       total + lang.models.reduce((langTotal, model) => langTotal + model.n_samples, 0), 0
     );
   }, [languageData]);
@@ -174,16 +179,24 @@ function App() {
             </CardContent>
           </Card>
 
-          <Card className="border-primary/20">
+          <Card className="border-yellow-500/50 bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Samples</CardTitle>
-              <Database className="h-4 w-4 text-muted-foreground" />
+              <CardTitle className="text-sm font-medium">Top Performer</CardTitle>
+              <Trophy className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-primary">{totalSamples.toLocaleString()}</div>
-              <p className="text-xs text-muted-foreground">
-                High-quality evaluation data
-              </p>
+              {winner ? (
+                <>
+                  <div className="text-2xl font-bold text-primary">
+                    {winner.model}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Winner in {winner.languagesWon} of {winner.totalLanguages} languages
+                  </p>
+                </>
+              ) : (
+                <div className="text-sm text-muted-foreground">Loading...</div>
+              )}
             </CardContent>
           </Card>
         </div>
