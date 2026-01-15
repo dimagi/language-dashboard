@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+ewondo,Affordable and Clean Energy,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Affordable and Clean Energy,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Affordable and Clean Energy,gemini-2.5-pro,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Affordable and Clean Energy,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Clean Water and Sanitation,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Clean Water and Sanitation,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Clean Water and Sanitation,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Clean Water and Sanitation,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Climate Action,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Climate Action,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Climate Action,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Climate Action,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Climate Action,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Crime and Law,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Crime and Law,claude-sonnet-4-20250514,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Crime and Law,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Crime and Law,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Crime and Law,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Culture,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Culture,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Culture,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Culture,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Culture,gpt-5-2025-08-07,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Decent Work and Economic Growth,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Decent Work and Economic Growth,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Decent Work and Economic Growth,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Disasters and Accidents,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Disasters and Accidents,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Disasters and Accidents,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Disasters and Accidents,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Disasters and Accidents,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Entertainment,claude-3-5-sonnet-20241022,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Entertainment,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Entertainment,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Entertainment,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Entertainment,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Environment,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Environment,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Environment,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Environment,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Environment,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Gender Equality,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Gender Equality,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Gender Equality,gemini-2.5-pro,5,1.6,1.2,0.0,0.0,100.0
+ewondo,Gender Equality,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Gender Equality,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Global Partnerships,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Global Partnerships,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Global Partnerships,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Global Partnerships,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Global Partnerships,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Good Health and Well-Being,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Good Health and Well-Being,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Good Health and Well-Being,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Good Health and Well-Being,gpt-4.1-2025-04-14,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Good Health and Well-Being,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Health,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Health,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Health,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Health,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Health,gpt-5-2025-08-07,5,1.2,1.2,0.0,0.0,100.0
+ewondo,History,claude-3-5-sonnet-20241022,5,1.4,1.4,0.0,0.0,100.0
+ewondo,History,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,History,gemini-2.5-pro,5,1.4,1.4,0.0,0.0,100.0
+ewondo,History,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,History,gpt-5-2025-08-07,5,1.0,1.2,0.0,0.0,100.0
+ewondo,Hunger and Food Security,claude-3-5-sonnet-20241022,5,1.4,1.4,0.0,0.0,100.0
+ewondo,Hunger and Food Security,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Hunger and Food Security,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Hunger and Food Security,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Hunger and Food Security,gpt-5-2025-08-07,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Industry and Infrastructure,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Industry and Infrastructure,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Industry and Infrastructure,gemini-2.5-pro,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Industry and Infrastructure,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Industry and Infrastructure,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Marine Conservation (Life Below Water),claude-3-5-sonnet-20241022,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Marine Conservation (Life Below Water),gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Peace and Justice,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Peace and Justice,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Peace and Justice,gemini-2.5-pro,5,1.2,1.4,0.0,0.0,100.0
+ewondo,Peace and Justice,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Peace and Justice,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Politics,claude-3-5-sonnet-20241022,5,1.4,1.4,0.0,0.0,100.0
+ewondo,Politics,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Politics,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Politics,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Politics,gpt-5-2025-08-07,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Poverty Eradication,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Poverty Eradication,claude-sonnet-4-20250514,5,1.0,1.2,0.0,0.0,100.0
+ewondo,Poverty Eradication,gemini-2.5-pro,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Poverty Eradication,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Poverty Eradication,gpt-5-2025-08-07,5,1.0,1.2,0.0,0.0,100.0
+ewondo,Quality Education,claude-3-5-sonnet-20241022,5,1.4,1.4,0.0,0.0,100.0
+ewondo,Quality Education,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Quality Education,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Quality Education,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Quality Education,gpt-5-2025-08-07,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Reducing Inequality,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Reducing Inequality,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Reducing Inequality,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Reducing Inequality,gpt-4.1-2025-04-14,5,1.0,1.2,0.0,0.0,100.0
+ewondo,Reducing Inequality,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Responsible Consumption,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Responsible Consumption,claude-sonnet-4-20250514,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Responsible Consumption,gemini-2.5-pro,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Responsible Consumption,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Responsible Consumption,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Safety,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Safety,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Safety,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Safety,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Safety,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Science and Technology,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Science and Technology,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Science and Technology,gemini-2.5-pro,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Science and Technology,gpt-4.1-2025-04-14,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Science and Technology,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sports,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sports,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sports,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sports,gpt-4.1-2025-04-14,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Sports,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sustainable Cities,claude-3-5-sonnet-20241022,5,1.2,1.2,0.0,0.0,100.0
+ewondo,Sustainable Cities,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sustainable Cities,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sustainable Cities,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Sustainable Cities,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Terrestrial Ecosystems (Life on Land),claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Tourism,claude-3-5-sonnet-20241022,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Tourism,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Tourism,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Tourism,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Tourism,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Travel,claude-3-5-sonnet-20241022,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Travel,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Travel,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Travel,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Travel,gpt-5-2025-08-07,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Weather,claude-3-5-sonnet-20241022,5,1.2,1.0,0.0,0.0,100.0
+ewondo,Weather,claude-sonnet-4-20250514,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Weather,gemini-2.5-pro,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Weather,gpt-4.1-2025-04-14,5,1.0,1.0,0.0,0.0,100.0
+ewondo,Weather,gpt-5-2025-08-07,5,1.0,1.0,0.0,0.0,100.0
