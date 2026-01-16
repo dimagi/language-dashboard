@@ -1,0 +1,125 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+amharic,Affordable and Clean Energy,claude-sonnet-4-20250514,5,5.8,5.4,80.0,60.0,20.0
+amharic,Affordable and Clean Energy,gemini-2.5-pro,5,5.8,6.0,0.0,100.0,60.0
+amharic,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,3.2,2.6,100.0,100.0,80.0
+amharic,Affordable and Clean Energy,gpt-5-2025-08-07,5,3.4,3.4,100.0,100.0,100.0
+amharic,Clean Water and Sanitation,claude-sonnet-4-20250514,5,5.6,5.4,60.0,80.0,40.0
+amharic,Clean Water and Sanitation,gemini-2.5-pro,5,6.8,7.0,0.0,80.0,0.0
+amharic,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,4.0,3.2,80.0,80.0,80.0
+amharic,Clean Water and Sanitation,gpt-5-2025-08-07,5,5.0,4.2,100.0,100.0,80.0
+amharic,Climate Action,claude-sonnet-4-20250514,5,5.6,5.6,40.0,100.0,40.0
+amharic,Climate Action,gemini-2.5-pro,5,6.4,6.4,0.0,100.0,20.0
+amharic,Climate Action,gpt-4.1-2025-04-14,5,2.8,2.4,60.0,80.0,100.0
+amharic,Climate Action,gpt-5-2025-08-07,5,5.0,4.6,60.0,100.0,60.0
+amharic,Crime and Law,claude-sonnet-4-20250514,5,6.2,6.4,20.0,100.0,20.0
+amharic,Crime and Law,gemini-2.5-pro,5,6.8,5.8,20.0,100.0,20.0
+amharic,Crime and Law,gpt-4.1-2025-04-14,5,3.6,3.4,100.0,100.0,80.0
+amharic,Crime and Law,gpt-5-2025-08-07,5,5.0,4.4,60.0,100.0,60.0
+amharic,Culture,claude-sonnet-4-20250514,5,5.6,5.6,40.0,100.0,20.0
+amharic,Culture,gemini-2.5-pro,5,6.8,6.6,0.0,80.0,20.0
+amharic,Culture,gpt-4.1-2025-04-14,5,4.6,4.0,60.0,100.0,60.0
+amharic,Culture,gpt-5-2025-08-07,5,4.8,4.0,80.0,100.0,60.0
+amharic,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,6.6,6.4,40.0,80.0,20.0
+amharic,Decent Work and Economic Growth,gemini-2.5-pro,5,6.4,6.8,0.0,100.0,0.0
+amharic,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,4.0,3.0,80.0,80.0,80.0
+amharic,Decent Work and Economic Growth,gpt-5-2025-08-07,5,5.6,5.4,60.0,100.0,20.0
+amharic,Disasters and Accidents,claude-sonnet-4-20250514,5,5.0,4.6,80.0,100.0,60.0
+amharic,Disasters and Accidents,gemini-2.5-pro,5,6.8,6.8,20.0,100.0,40.0
+amharic,Disasters and Accidents,gpt-4.1-2025-04-14,5,2.4,2.2,100.0,100.0,100.0
+amharic,Disasters and Accidents,gpt-5-2025-08-07,5,4.4,4.0,100.0,100.0,80.0
+amharic,Entertainment,claude-sonnet-4-20250514,5,6.0,5.6,40.0,100.0,20.0
+amharic,Entertainment,gemini-2.5-pro,5,6.2,5.8,20.0,80.0,20.0
+amharic,Entertainment,gpt-4.1-2025-04-14,5,4.6,5.0,40.0,100.0,40.0
+amharic,Entertainment,gpt-5-2025-08-07,5,5.4,5.0,80.0,80.0,40.0
+amharic,Environment,claude-sonnet-4-20250514,5,5.8,5.4,0.0,100.0,60.0
+amharic,Environment,gemini-2.5-pro,5,7.0,7.0,0.0,100.0,0.0
+amharic,Environment,gpt-4.1-2025-04-14,5,4.0,3.2,60.0,100.0,80.0
+amharic,Environment,gpt-5-2025-08-07,5,4.8,4.4,60.0,100.0,80.0
+amharic,Gender Equality,claude-sonnet-4-20250514,5,6.0,5.8,40.0,60.0,20.0
+amharic,Gender Equality,gemini-2.5-pro,5,6.6,6.8,0.0,80.0,0.0
+amharic,Gender Equality,gpt-4.1-2025-04-14,5,3.2,2.4,80.0,80.0,80.0
+amharic,Gender Equality,gpt-5-2025-08-07,5,4.6,4.2,60.0,100.0,60.0
+amharic,Global Partnerships,claude-sonnet-4-20250514,5,6.4,5.6,20.0,100.0,40.0
+amharic,Global Partnerships,gemini-2.5-pro,5,6.6,6.4,20.0,100.0,20.0
+amharic,Global Partnerships,gpt-4.1-2025-04-14,5,3.6,3.2,100.0,80.0,100.0
+amharic,Global Partnerships,gpt-5-2025-08-07,5,5.6,5.2,60.0,80.0,40.0
+amharic,Good Health and Well-Being,claude-sonnet-4-20250514,5,6.0,6.2,40.0,100.0,40.0
+amharic,Good Health and Well-Being,gemini-2.5-pro,5,6.8,6.6,0.0,100.0,0.0
+amharic,Good Health and Well-Being,gpt-4.1-2025-04-14,5,4.0,3.0,100.0,100.0,100.0
+amharic,Good Health and Well-Being,gpt-5-2025-08-07,5,4.2,3.6,100.0,80.0,60.0
+amharic,Health,claude-sonnet-4-20250514,5,6.0,5.6,60.0,100.0,60.0
+amharic,Health,gemini-2.5-pro,5,6.8,6.8,0.0,80.0,0.0
+amharic,Health,gpt-4.1-2025-04-14,5,2.8,2.2,100.0,100.0,80.0
+amharic,Health,gpt-5-2025-08-07,5,6.2,6.0,40.0,80.0,0.0
+amharic,History,claude-sonnet-4-20250514,5,6.2,6.4,20.0,100.0,0.0
+amharic,History,gemini-2.5-pro,5,6.6,6.0,40.0,100.0,0.0
+amharic,History,gpt-4.1-2025-04-14,5,4.4,3.8,60.0,100.0,100.0
+amharic,History,gpt-5-2025-08-07,5,6.0,5.8,40.0,80.0,40.0
+amharic,Hunger and Food Security,claude-sonnet-4-20250514,5,6.6,6.4,40.0,100.0,20.0
+amharic,Hunger and Food Security,gemini-2.5-pro,5,6.8,6.8,0.0,80.0,20.0
+amharic,Hunger and Food Security,gpt-4.1-2025-04-14,5,4.6,3.2,80.0,100.0,80.0
+amharic,Hunger and Food Security,gpt-5-2025-08-07,5,3.8,4.2,80.0,80.0,80.0
+amharic,Industry and Infrastructure,claude-sonnet-4-20250514,5,6.0,6.4,40.0,80.0,20.0
+amharic,Industry and Infrastructure,gemini-2.5-pro,5,6.6,6.4,20.0,80.0,40.0
+amharic,Industry and Infrastructure,gpt-4.1-2025-04-14,5,2.8,2.4,80.0,100.0,80.0
+amharic,Industry and Infrastructure,gpt-5-2025-08-07,5,5.4,5.4,80.0,100.0,80.0
+amharic,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,5.6,5.6,60.0,100.0,20.0
+amharic,Marine Conservation (Life Below Water),gemini-2.5-pro,5,6.4,6.6,60.0,100.0,20.0
+amharic,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,4.2,3.0,80.0,100.0,80.0
+amharic,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,4.0,4.0,80.0,80.0,60.0
+amharic,Peace and Justice,claude-sonnet-4-20250514,5,6.6,6.6,40.0,100.0,20.0
+amharic,Peace and Justice,gemini-2.5-pro,5,6.6,6.4,20.0,100.0,20.0
+amharic,Peace and Justice,gpt-4.1-2025-04-14,5,5.8,5.4,40.0,100.0,60.0
+amharic,Peace and Justice,gpt-5-2025-08-07,5,4.8,5.6,80.0,100.0,40.0
+amharic,Politics,claude-sonnet-4-20250514,5,6.6,6.6,40.0,100.0,40.0
+amharic,Politics,gemini-2.5-pro,5,6.8,6.8,40.0,100.0,0.0
+amharic,Politics,gpt-4.1-2025-04-14,5,3.8,3.4,60.0,100.0,80.0
+amharic,Politics,gpt-5-2025-08-07,5,5.4,4.8,40.0,80.0,60.0
+amharic,Poverty Eradication,claude-sonnet-4-20250514,5,6.6,6.4,40.0,100.0,0.0
+amharic,Poverty Eradication,gemini-2.5-pro,5,6.6,6.4,20.0,100.0,20.0
+amharic,Poverty Eradication,gpt-4.1-2025-04-14,5,3.6,3.6,60.0,100.0,80.0
+amharic,Poverty Eradication,gpt-5-2025-08-07,5,5.0,5.2,40.0,100.0,60.0
+amharic,Quality Education,claude-sonnet-4-20250514,5,6.6,6.8,40.0,100.0,0.0
+amharic,Quality Education,gemini-2.5-pro,5,7.0,7.0,0.0,100.0,0.0
+amharic,Quality Education,gpt-4.1-2025-04-14,5,3.8,3.2,100.0,100.0,80.0
+amharic,Quality Education,gpt-5-2025-08-07,5,5.2,4.4,80.0,100.0,40.0
+amharic,Reducing Inequality,claude-sonnet-4-20250514,5,5.6,5.4,60.0,100.0,20.0
+amharic,Reducing Inequality,gemini-2.5-pro,5,6.6,6.8,0.0,100.0,0.0
+amharic,Reducing Inequality,gpt-4.1-2025-04-14,5,3.4,2.6,80.0,80.0,100.0
+amharic,Reducing Inequality,gpt-5-2025-08-07,5,4.8,5.0,60.0,100.0,80.0
+amharic,Responsible Consumption,claude-sonnet-4-20250514,5,4.8,5.4,60.0,100.0,20.0
+amharic,Responsible Consumption,gemini-2.5-pro,5,6.8,6.8,0.0,100.0,20.0
+amharic,Responsible Consumption,gpt-4.1-2025-04-14,5,4.0,3.2,80.0,100.0,80.0
+amharic,Responsible Consumption,gpt-5-2025-08-07,5,4.2,4.2,60.0,100.0,40.0
+amharic,Safety,claude-sonnet-4-20250514,5,6.2,5.8,20.0,100.0,40.0
+amharic,Safety,gemini-2.5-pro,5,6.4,6.4,20.0,80.0,40.0
+amharic,Safety,gpt-4.1-2025-04-14,5,3.6,2.2,100.0,100.0,80.0
+amharic,Safety,gpt-5-2025-08-07,5,5.0,4.2,80.0,80.0,60.0
+amharic,Science and Technology,claude-sonnet-4-20250514,5,5.8,5.4,40.0,100.0,20.0
+amharic,Science and Technology,gemini-2.5-pro,5,6.2,5.6,0.0,100.0,20.0
+amharic,Science and Technology,gpt-4.1-2025-04-14,5,4.4,4.2,100.0,100.0,80.0
+amharic,Science and Technology,gpt-5-2025-08-07,5,6.0,5.8,40.0,100.0,40.0
+amharic,Sports,claude-sonnet-4-20250514,5,6.4,6.4,20.0,80.0,20.0
+amharic,Sports,gemini-2.5-pro,5,6.2,6.0,40.0,100.0,20.0
+amharic,Sports,gpt-4.1-2025-04-14,5,3.8,3.2,80.0,80.0,80.0
+amharic,Sports,gpt-5-2025-08-07,5,4.0,3.6,80.0,100.0,80.0
+amharic,Sustainable Cities,claude-sonnet-4-20250514,5,6.4,6.2,0.0,60.0,60.0
+amharic,Sustainable Cities,gemini-2.5-pro,5,5.6,6.2,60.0,100.0,0.0
+amharic,Sustainable Cities,gpt-4.1-2025-04-14,5,2.8,1.6,80.0,100.0,100.0
+amharic,Sustainable Cities,gpt-5-2025-08-07,5,5.4,5.4,40.0,100.0,60.0
+amharic,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,4.6,4.6,60.0,100.0,40.0
+amharic,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,6.6,6.2,0.0,80.0,0.0
+amharic,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,3.8,2.4,100.0,100.0,80.0
+amharic,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,4.0,3.2,80.0,80.0,100.0
+amharic,Tourism,claude-sonnet-4-20250514,5,5.6,4.8,60.0,80.0,40.0
+amharic,Tourism,gemini-2.5-pro,5,5.2,5.0,40.0,100.0,40.0
+amharic,Tourism,gpt-4.1-2025-04-14,5,2.6,1.4,100.0,80.0,100.0
+amharic,Tourism,gpt-5-2025-08-07,5,4.2,4.6,80.0,80.0,60.0
+amharic,Travel,claude-sonnet-4-20250514,5,6.0,6.4,20.0,100.0,20.0
+amharic,Travel,gemini-2.5-pro,5,6.4,6.4,80.0,100.0,20.0
+amharic,Travel,gpt-4.1-2025-04-14,5,4.4,3.8,60.0,100.0,80.0
+amharic,Travel,gpt-5-2025-08-07,5,4.6,4.8,100.0,100.0,20.0
+amharic,Weather,claude-sonnet-4-20250514,5,5.6,4.2,60.0,100.0,60.0
+amharic,Weather,gemini-2.5-pro,5,6.2,6.2,20.0,100.0,0.0
+amharic,Weather,gpt-4.1-2025-04-14,5,3.8,3.2,100.0,100.0,80.0
+amharic,Weather,gpt-5-2025-08-07,5,2.6,3.0,100.0,100.0,80.0

@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+chichewa,Affordable and Clean Energy,claude-3-5-sonnet-20241022,5,7.0,6.2,100.0,100.0,0.0
+chichewa,Affordable and Clean Energy,claude-sonnet-4-20250514,5,6.8,6.4,80.0,80.0,0.0
+chichewa,Affordable and Clean Energy,gemini-2.5-pro,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Affordable and Clean Energy,gpt-5-2025-08-07,5,6.6,6.4,100.0,80.0,0.0
+chichewa,Clean Water and Sanitation,claude-3-5-sonnet-20241022,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Clean Water and Sanitation,claude-sonnet-4-20250514,5,6.6,6.2,100.0,100.0,20.0
+chichewa,Clean Water and Sanitation,gemini-2.5-pro,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Clean Water and Sanitation,gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Climate Action,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,20.0
+chichewa,Climate Action,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Climate Action,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Climate Action,gpt-4.1-2025-04-14,5,6.6,6.0,100.0,100.0,20.0
+chichewa,Climate Action,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Crime and Law,claude-3-5-sonnet-20241022,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Crime and Law,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Crime and Law,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Crime and Law,gpt-4.1-2025-04-14,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Crime and Law,gpt-5-2025-08-07,5,6.4,6.6,100.0,80.0,0.0
+chichewa,Culture,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Culture,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Culture,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Culture,gpt-4.1-2025-04-14,5,6.6,6.0,100.0,80.0,20.0
+chichewa,Culture,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Decent Work and Economic Growth,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Decent Work and Economic Growth,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Decent Work and Economic Growth,gpt-5-2025-08-07,5,7.0,6.2,100.0,100.0,20.0
+chichewa,Disasters and Accidents,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Disasters and Accidents,claude-sonnet-4-20250514,5,6.6,5.6,80.0,100.0,20.0
+chichewa,Disasters and Accidents,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Disasters and Accidents,gpt-4.1-2025-04-14,5,6.8,6.0,100.0,100.0,0.0
+chichewa,Disasters and Accidents,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Entertainment,claude-3-5-sonnet-20241022,5,6.8,5.8,100.0,80.0,20.0
+chichewa,Entertainment,claude-sonnet-4-20250514,5,6.6,5.0,100.0,60.0,20.0
+chichewa,Entertainment,gemini-2.5-pro,5,6.2,6.0,100.0,100.0,0.0
+chichewa,Entertainment,gpt-4.1-2025-04-14,5,6.4,6.0,100.0,80.0,0.0
+chichewa,Entertainment,gpt-5-2025-08-07,5,6.0,5.8,100.0,60.0,40.0
+chichewa,Environment,claude-3-5-sonnet-20241022,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Environment,claude-sonnet-4-20250514,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Environment,gemini-2.5-pro,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Environment,gpt-4.1-2025-04-14,5,6.2,5.4,100.0,100.0,0.0
+chichewa,Environment,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Gender Equality,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Gender Equality,claude-sonnet-4-20250514,5,6.8,6.6,100.0,100.0,0.0
+chichewa,Gender Equality,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Gender Equality,gpt-4.1-2025-04-14,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Gender Equality,gpt-5-2025-08-07,5,6.2,6.4,80.0,80.0,20.0
+chichewa,Global Partnerships,claude-3-5-sonnet-20241022,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Global Partnerships,claude-sonnet-4-20250514,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Global Partnerships,gemini-2.5-pro,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Global Partnerships,gpt-4.1-2025-04-14,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Global Partnerships,gpt-5-2025-08-07,5,6.0,5.6,100.0,80.0,20.0
+chichewa,Good Health and Well-Being,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Good Health and Well-Being,claude-sonnet-4-20250514,5,7.0,6.2,100.0,100.0,0.0
+chichewa,Good Health and Well-Being,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Good Health and Well-Being,gpt-4.1-2025-04-14,5,6.0,5.6,80.0,100.0,20.0
+chichewa,Good Health and Well-Being,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Health,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Health,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Health,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Health,gpt-4.1-2025-04-14,5,6.0,5.2,100.0,80.0,20.0
+chichewa,Health,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,History,claude-3-5-sonnet-20241022,5,6.8,6.6,100.0,100.0,0.0
+chichewa,History,claude-sonnet-4-20250514,5,6.8,6.8,100.0,80.0,0.0
+chichewa,History,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,History,gpt-4.1-2025-04-14,5,6.8,6.4,100.0,100.0,0.0
+chichewa,History,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Hunger and Food Security,claude-3-5-sonnet-20241022,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Hunger and Food Security,claude-sonnet-4-20250514,5,6.6,6.6,100.0,100.0,0.0
+chichewa,Hunger and Food Security,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Hunger and Food Security,gpt-4.1-2025-04-14,5,6.0,5.4,80.0,100.0,20.0
+chichewa,Hunger and Food Security,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Industry and Infrastructure,claude-3-5-sonnet-20241022,5,6.6,5.6,80.0,100.0,20.0
+chichewa,Industry and Infrastructure,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Industry and Infrastructure,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Industry and Infrastructure,gpt-4.1-2025-04-14,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Industry and Infrastructure,gpt-5-2025-08-07,5,7.0,6.4,100.0,80.0,0.0
+chichewa,Marine Conservation (Life Below Water),claude-3-5-sonnet-20241022,5,6.2,5.2,100.0,100.0,0.0
+chichewa,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,6.8,4.6,80.0,100.0,20.0
+chichewa,Marine Conservation (Life Below Water),gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,6.8,6.6,80.0,100.0,0.0
+chichewa,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Peace and Justice,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Peace and Justice,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Peace and Justice,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Peace and Justice,gpt-4.1-2025-04-14,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Peace and Justice,gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Politics,claude-3-5-sonnet-20241022,5,6.8,6.6,100.0,100.0,0.0
+chichewa,Politics,claude-sonnet-4-20250514,5,6.6,6.6,100.0,80.0,0.0
+chichewa,Politics,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Politics,gpt-4.1-2025-04-14,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Politics,gpt-5-2025-08-07,5,6.6,6.2,80.0,60.0,20.0
+chichewa,Poverty Eradication,claude-3-5-sonnet-20241022,5,6.8,6.2,100.0,100.0,0.0
+chichewa,Poverty Eradication,claude-sonnet-4-20250514,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Poverty Eradication,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Poverty Eradication,gpt-4.1-2025-04-14,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Poverty Eradication,gpt-5-2025-08-07,5,6.6,6.0,100.0,100.0,0.0
+chichewa,Quality Education,claude-3-5-sonnet-20241022,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Quality Education,claude-sonnet-4-20250514,5,7.0,6.0,100.0,100.0,20.0
+chichewa,Quality Education,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Quality Education,gpt-4.1-2025-04-14,5,6.2,5.8,80.0,100.0,20.0
+chichewa,Quality Education,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Reducing Inequality,claude-3-5-sonnet-20241022,5,6.8,6.8,100.0,100.0,0.0
+chichewa,Reducing Inequality,claude-sonnet-4-20250514,5,6.2,6.2,100.0,100.0,0.0
+chichewa,Reducing Inequality,gemini-2.5-pro,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Reducing Inequality,gpt-4.1-2025-04-14,5,6.8,6.2,100.0,100.0,0.0
+chichewa,Reducing Inequality,gpt-5-2025-08-07,5,6.6,6.6,100.0,100.0,0.0
+chichewa,Responsible Consumption,claude-3-5-sonnet-20241022,5,6.8,6.2,100.0,100.0,0.0
+chichewa,Responsible Consumption,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Responsible Consumption,gemini-2.5-pro,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Responsible Consumption,gpt-4.1-2025-04-14,5,6.6,6.0,100.0,100.0,0.0
+chichewa,Responsible Consumption,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Safety,claude-3-5-sonnet-20241022,5,6.6,5.6,100.0,100.0,0.0
+chichewa,Safety,claude-sonnet-4-20250514,5,6.6,6.4,100.0,100.0,0.0
+chichewa,Safety,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+chichewa,Safety,gpt-4.1-2025-04-14,5,6.6,6.6,100.0,100.0,0.0
+chichewa,Safety,gpt-5-2025-08-07,5,6.8,6.4,100.0,60.0,20.0
+chichewa,Science and Technology,claude-3-5-sonnet-20241022,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Science and Technology,claude-sonnet-4-20250514,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Science and Technology,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Science and Technology,gpt-4.1-2025-04-14,5,6.0,5.8,80.0,80.0,20.0
+chichewa,Science and Technology,gpt-5-2025-08-07,5,6.4,6.4,100.0,80.0,0.0
+chichewa,Sports,claude-3-5-sonnet-20241022,5,6.8,6.0,100.0,100.0,0.0
+chichewa,Sports,claude-sonnet-4-20250514,5,6.2,6.0,100.0,60.0,20.0
+chichewa,Sports,gemini-2.5-pro,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Sports,gpt-4.1-2025-04-14,5,6.8,6.2,100.0,80.0,20.0
+chichewa,Sports,gpt-5-2025-08-07,5,6.6,6.4,100.0,60.0,0.0
+chichewa,Sustainable Cities,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Sustainable Cities,claude-sonnet-4-20250514,5,6.8,6.4,100.0,100.0,0.0
+chichewa,Sustainable Cities,gemini-2.5-pro,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Sustainable Cities,gpt-4.1-2025-04-14,5,6.6,6.4,100.0,100.0,0.0
+chichewa,Sustainable Cities,gpt-5-2025-08-07,5,7.0,6.2,100.0,100.0,0.0
+chichewa,Terrestrial Ecosystems (Life on Land),claude-3-5-sonnet-20241022,5,6.8,6.6,100.0,100.0,0.0
+chichewa,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,6.6,6.6,80.0,80.0,20.0
+chichewa,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Tourism,claude-3-5-sonnet-20241022,5,7.0,6.6,100.0,100.0,0.0
+chichewa,Tourism,claude-sonnet-4-20250514,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Tourism,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Tourism,gpt-4.1-2025-04-14,5,7.0,6.2,80.0,100.0,20.0
+chichewa,Tourism,gpt-5-2025-08-07,5,6.8,6.6,100.0,80.0,0.0
+chichewa,Travel,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Travel,claude-sonnet-4-20250514,5,6.6,6.2,100.0,100.0,0.0
+chichewa,Travel,gemini-2.5-pro,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Travel,gpt-4.1-2025-04-14,5,6.8,6.6,100.0,80.0,20.0
+chichewa,Travel,gpt-5-2025-08-07,5,7.0,6.4,100.0,100.0,0.0
+chichewa,Weather,claude-3-5-sonnet-20241022,5,7.0,6.8,100.0,100.0,0.0
+chichewa,Weather,claude-sonnet-4-20250514,5,6.6,6.2,100.0,100.0,0.0
+chichewa,Weather,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+chichewa,Weather,gpt-4.1-2025-04-14,5,5.6,4.6,100.0,60.0,60.0
+chichewa,Weather,gpt-5-2025-08-07,5,6.6,6.4,100.0,100.0,0.0

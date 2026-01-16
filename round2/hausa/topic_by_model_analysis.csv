@@ -1,0 +1,156 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+hausa,Affordable and Clean Energy,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+hausa,Affordable and Clean Energy,gemini-2.5-pro,5,6.2,6.8,100.0,100.0,0.0
+hausa,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,5.8,6.2,100.0,100.0,0.0
+hausa,Affordable and Clean Energy,gpt-4o-2024-11-20,5,6.6,6.2,100.0,100.0,0.0
+hausa,Affordable and Clean Energy,gpt-5-2025-08-07,5,6.4,6.6,100.0,100.0,0.0
+hausa,Clean Water and Sanitation,claude-sonnet-4-20250514,5,6.8,7.0,100.0,100.0,0.0
+hausa,Clean Water and Sanitation,gemini-2.5-pro,5,6.2,6.6,100.0,100.0,0.0
+hausa,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,6.8,6.4,100.0,100.0,0.0
+hausa,Clean Water and Sanitation,gpt-4o-2024-11-20,5,5.4,5.4,80.0,80.0,20.0
+hausa,Clean Water and Sanitation,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+hausa,Climate Action,claude-sonnet-4-20250514,5,6.4,5.8,80.0,100.0,0.0
+hausa,Climate Action,gemini-2.5-pro,5,6.2,7.0,100.0,100.0,0.0
+hausa,Climate Action,gpt-4.1-2025-04-14,5,5.6,6.6,100.0,100.0,0.0
+hausa,Climate Action,gpt-4o-2024-11-20,5,6.6,6.8,100.0,100.0,0.0
+hausa,Climate Action,gpt-5-2025-08-07,5,7.0,6.4,100.0,100.0,0.0
+hausa,Crime and Law,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+hausa,Crime and Law,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+hausa,Crime and Law,gpt-4.1-2025-04-14,5,6.6,6.8,100.0,100.0,0.0
+hausa,Crime and Law,gpt-4o-2024-11-20,5,7.0,6.8,100.0,100.0,0.0
+hausa,Crime and Law,gpt-5-2025-08-07,5,6.6,7.0,100.0,100.0,0.0
+hausa,Culture,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Culture,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Culture,gpt-4.1-2025-04-14,5,6.4,6.4,100.0,100.0,0.0
+hausa,Culture,gpt-4o-2024-11-20,5,6.4,6.6,100.0,100.0,0.0
+hausa,Culture,gpt-5-2025-08-07,5,6.8,6.6,100.0,100.0,0.0
+hausa,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Decent Work and Economic Growth,gemini-2.5-pro,5,6.0,7.0,100.0,100.0,0.0
+hausa,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,6.6,7.0,100.0,100.0,0.0
+hausa,Decent Work and Economic Growth,gpt-4o-2024-11-20,5,6.0,6.8,100.0,100.0,0.0
+hausa,Decent Work and Economic Growth,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+hausa,Disasters and Accidents,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+hausa,Disasters and Accidents,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Disasters and Accidents,gpt-4.1-2025-04-14,5,6.8,7.0,100.0,100.0,0.0
+hausa,Disasters and Accidents,gpt-4o-2024-11-20,5,6.6,6.0,100.0,100.0,0.0
+hausa,Disasters and Accidents,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,0.0
+hausa,Entertainment,claude-sonnet-4-20250514,5,7.0,6.4,100.0,100.0,0.0
+hausa,Entertainment,gemini-2.5-pro,5,6.2,6.8,100.0,100.0,0.0
+hausa,Entertainment,gpt-4.1-2025-04-14,5,6.8,6.6,100.0,100.0,0.0
+hausa,Entertainment,gpt-4o-2024-11-20,5,6.6,6.4,100.0,100.0,0.0
+hausa,Entertainment,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
+hausa,Environment,claude-sonnet-4-20250514,5,7.0,6.2,100.0,80.0,0.0
+hausa,Environment,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+hausa,Environment,gpt-4.1-2025-04-14,5,6.2,7.0,100.0,100.0,0.0
+hausa,Environment,gpt-4o-2024-11-20,5,6.8,6.6,100.0,100.0,0.0
+hausa,Environment,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+hausa,Gender Equality,claude-sonnet-4-20250514,5,6.2,6.8,100.0,100.0,0.0
+hausa,Gender Equality,gemini-2.5-pro,5,6.2,6.8,100.0,100.0,0.0
+hausa,Gender Equality,gpt-4.1-2025-04-14,5,6.0,6.6,100.0,100.0,0.0
+hausa,Gender Equality,gpt-4o-2024-11-20,5,6.2,6.0,100.0,100.0,0.0
+hausa,Gender Equality,gpt-5-2025-08-07,5,6.8,6.6,100.0,100.0,0.0
+hausa,Global Partnerships,claude-sonnet-4-20250514,5,6.2,6.8,100.0,100.0,0.0
+hausa,Global Partnerships,gemini-2.5-pro,5,6.4,7.0,100.0,100.0,0.0
+hausa,Global Partnerships,gpt-4.1-2025-04-14,5,5.8,6.8,100.0,100.0,0.0
+hausa,Global Partnerships,gpt-4o-2024-11-20,5,6.2,6.8,100.0,100.0,0.0
+hausa,Global Partnerships,gpt-5-2025-08-07,5,6.2,6.8,100.0,100.0,0.0
+hausa,Good Health and Well-Being,claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+hausa,Good Health and Well-Being,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Good Health and Well-Being,gpt-4.1-2025-04-14,5,6.8,6.2,100.0,100.0,0.0
+hausa,Good Health and Well-Being,gpt-4o-2024-11-20,5,6.8,6.4,100.0,100.0,0.0
+hausa,Good Health and Well-Being,gpt-5-2025-08-07,5,6.6,6.8,100.0,100.0,0.0
+hausa,Health,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Health,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+hausa,Health,gpt-4.1-2025-04-14,5,7.0,6.8,100.0,100.0,0.0
+hausa,Health,gpt-4o-2024-11-20,5,6.8,6.8,100.0,100.0,0.0
+hausa,Health,gpt-5-2025-08-07,5,6.8,6.6,100.0,100.0,0.0
+hausa,History,claude-sonnet-4-20250514,5,6.8,6.8,100.0,100.0,0.0
+hausa,History,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+hausa,History,gpt-4.1-2025-04-14,5,6.6,6.4,100.0,100.0,0.0
+hausa,History,gpt-4o-2024-11-20,5,6.4,6.4,100.0,100.0,0.0
+hausa,History,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+hausa,Hunger and Food Security,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+hausa,Hunger and Food Security,gemini-2.5-pro,5,6.0,6.8,100.0,100.0,0.0
+hausa,Hunger and Food Security,gpt-4.1-2025-04-14,5,6.6,7.0,100.0,100.0,0.0
+hausa,Hunger and Food Security,gpt-4o-2024-11-20,5,6.4,6.8,100.0,100.0,0.0
+hausa,Hunger and Food Security,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+hausa,Industry and Infrastructure,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Industry and Infrastructure,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+hausa,Industry and Infrastructure,gpt-4.1-2025-04-14,5,6.4,6.6,100.0,100.0,0.0
+hausa,Industry and Infrastructure,gpt-4o-2024-11-20,5,6.6,6.8,100.0,100.0,0.0
+hausa,Industry and Infrastructure,gpt-5-2025-08-07,5,6.8,6.6,100.0,100.0,0.0
+hausa,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,6.8,6.4,100.0,100.0,0.0
+hausa,Marine Conservation (Life Below Water),gemini-2.5-pro,5,6.2,7.0,100.0,100.0,0.0
+hausa,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,5.6,6.8,100.0,100.0,0.0
+hausa,Marine Conservation (Life Below Water),gpt-4o-2024-11-20,5,6.6,6.8,100.0,100.0,0.0
+hausa,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,6.6,6.4,100.0,100.0,0.0
+hausa,Peace and Justice,claude-sonnet-4-20250514,5,6.8,6.4,100.0,100.0,0.0
+hausa,Peace and Justice,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+hausa,Peace and Justice,gpt-4.1-2025-04-14,5,6.6,7.0,100.0,100.0,0.0
+hausa,Peace and Justice,gpt-4o-2024-11-20,5,7.0,6.6,100.0,100.0,0.0
+hausa,Peace and Justice,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,0.0
+hausa,Politics,claude-sonnet-4-20250514,5,6.8,6.8,100.0,100.0,0.0
+hausa,Politics,gemini-2.5-pro,5,7.0,6.8,100.0,100.0,0.0
+hausa,Politics,gpt-4.1-2025-04-14,5,6.4,7.0,100.0,100.0,0.0
+hausa,Politics,gpt-4o-2024-11-20,5,6.6,7.0,100.0,100.0,0.0
+hausa,Politics,gpt-5-2025-08-07,5,6.8,6.6,100.0,100.0,0.0
+hausa,Poverty Eradication,claude-sonnet-4-20250514,5,6.8,6.4,100.0,100.0,0.0
+hausa,Poverty Eradication,gemini-2.5-pro,5,6.6,6.8,100.0,100.0,0.0
+hausa,Poverty Eradication,gpt-4.1-2025-04-14,5,6.2,6.8,100.0,100.0,0.0
+hausa,Poverty Eradication,gpt-4o-2024-11-20,5,6.4,6.8,100.0,100.0,0.0
+hausa,Poverty Eradication,gpt-5-2025-08-07,5,6.2,6.8,100.0,100.0,0.0
+hausa,Quality Education,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+hausa,Quality Education,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+hausa,Quality Education,gpt-4.1-2025-04-14,5,6.0,6.8,100.0,100.0,0.0
+hausa,Quality Education,gpt-4o-2024-11-20,5,7.0,6.4,100.0,100.0,0.0
+hausa,Quality Education,gpt-5-2025-08-07,5,6.2,6.8,100.0,100.0,0.0
+hausa,Reducing Inequality,claude-sonnet-4-20250514,5,5.4,6.4,100.0,100.0,0.0
+hausa,Reducing Inequality,gemini-2.5-pro,5,5.6,7.0,100.0,100.0,0.0
+hausa,Reducing Inequality,gpt-4.1-2025-04-14,5,6.4,6.8,100.0,100.0,0.0
+hausa,Reducing Inequality,gpt-4o-2024-11-20,5,6.2,6.4,100.0,100.0,0.0
+hausa,Reducing Inequality,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,0.0
+hausa,Responsible Consumption,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Responsible Consumption,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+hausa,Responsible Consumption,gpt-4.1-2025-04-14,5,6.0,6.4,100.0,100.0,0.0
+hausa,Responsible Consumption,gpt-4o-2024-11-20,5,7.0,6.6,100.0,100.0,0.0
+hausa,Responsible Consumption,gpt-5-2025-08-07,5,6.4,6.4,100.0,100.0,0.0
+hausa,Safety,claude-sonnet-4-20250514,5,6.6,6.4,100.0,100.0,0.0
+hausa,Safety,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,0.0
+hausa,Safety,gpt-4.1-2025-04-14,5,6.6,6.8,100.0,100.0,0.0
+hausa,Safety,gpt-4o-2024-11-20,5,6.4,6.2,100.0,80.0,0.0
+hausa,Safety,gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,0.0
+hausa,Science and Technology,claude-sonnet-4-20250514,5,6.8,6.8,100.0,100.0,0.0
+hausa,Science and Technology,gemini-2.5-pro,5,6.6,6.8,100.0,100.0,0.0
+hausa,Science and Technology,gpt-4.1-2025-04-14,5,6.4,7.0,100.0,100.0,0.0
+hausa,Science and Technology,gpt-4o-2024-11-20,5,6.6,6.8,100.0,100.0,0.0
+hausa,Science and Technology,gpt-5-2025-08-07,5,6.4,6.8,100.0,100.0,0.0
+hausa,Sports,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Sports,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+hausa,Sports,gpt-4.1-2025-04-14,5,6.4,6.4,100.0,100.0,0.0
+hausa,Sports,gpt-4o-2024-11-20,5,7.0,7.0,100.0,100.0,0.0
+hausa,Sports,gpt-5-2025-08-07,5,7.0,6.6,100.0,100.0,0.0
+hausa,Sustainable Cities,claude-sonnet-4-20250514,5,6.8,6.6,100.0,100.0,0.0
+hausa,Sustainable Cities,gemini-2.5-pro,5,6.6,6.8,100.0,100.0,0.0
+hausa,Sustainable Cities,gpt-4.1-2025-04-14,5,6.6,6.6,100.0,100.0,0.0
+hausa,Sustainable Cities,gpt-4o-2024-11-20,5,5.8,6.6,100.0,100.0,0.0
+hausa,Sustainable Cities,gpt-5-2025-08-07,5,6.8,6.8,100.0,100.0,0.0
+hausa,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,7.0,7.0,100.0,100.0,0.0
+hausa,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,6.4,6.6,100.0,100.0,0.0
+hausa,Terrestrial Ecosystems (Life on Land),gpt-4o-2024-11-20,5,6.6,6.8,100.0,100.0,0.0
+hausa,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,6.4,6.6,100.0,100.0,0.0
+hausa,Tourism,claude-sonnet-4-20250514,5,7.0,6.2,100.0,100.0,0.0
+hausa,Tourism,gemini-2.5-pro,5,6.8,7.0,100.0,100.0,0.0
+hausa,Tourism,gpt-4.1-2025-04-14,5,6.8,6.6,100.0,100.0,0.0
+hausa,Tourism,gpt-4o-2024-11-20,5,6.6,6.4,100.0,100.0,0.0
+hausa,Tourism,gpt-5-2025-08-07,5,7.0,7.0,100.0,100.0,0.0
+hausa,Travel,claude-sonnet-4-20250514,5,7.0,6.8,100.0,100.0,0.0
+hausa,Travel,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Travel,gpt-4.1-2025-04-14,5,7.0,6.8,100.0,100.0,0.0
+hausa,Travel,gpt-4o-2024-11-20,5,7.0,6.6,100.0,100.0,0.0
+hausa,Travel,gpt-5-2025-08-07,5,6.6,6.6,100.0,100.0,0.0
+hausa,Weather,claude-sonnet-4-20250514,5,7.0,6.6,100.0,100.0,0.0
+hausa,Weather,gemini-2.5-pro,5,7.0,7.0,100.0,100.0,0.0
+hausa,Weather,gpt-4.1-2025-04-14,5,6.8,6.4,100.0,100.0,0.0
+hausa,Weather,gpt-4o-2024-11-20,5,7.0,6.4,100.0,100.0,0.0
+hausa,Weather,gpt-5-2025-08-07,5,7.0,6.8,100.0,100.0,0.0
