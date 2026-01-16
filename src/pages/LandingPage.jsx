@@ -379,7 +379,7 @@ function LandingPage({ theme, toggleTheme }) {
                         <div style={{ flex: 1 }}>
                             <h2 className="text-xl font-bold mb-2">Benchmarking Natural Language Generation for Low-Resource Languages</h2>
                             <p className="text-secondary leading-relaxed mb-4">
-                                Frontier models work great in high-resource languages like English. While we've seen some progress in low-resource languages,
+                                Frontier models work great in high-resource languages like English. While we've seen some progress in low-resource languages,{' '}
                                 <a
                                     href="https://www.pnas.org/doi/10.1073/pnas.2514626122"
                                     target="_blank"
