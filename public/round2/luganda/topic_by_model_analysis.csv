@@ -1,0 +1,125 @@
+language,topic,model,n_samples,readability_mean,adequacy_mean,grammatically_correct_pct,real_words_pct,notable_error_pct
+luganda,Affordable and Clean Energy,claude-sonnet-4-20250514,5,5.2,4.0,20.0,100.0,100.0
+luganda,Affordable and Clean Energy,gemini-2.5-pro,5,6.4,6.6,100.0,100.0,0.0
+luganda,Affordable and Clean Energy,gpt-4.1-2025-04-14,5,5.4,5.0,20.0,80.0,80.0
+luganda,Affordable and Clean Energy,gpt-5-2025-08-07,5,6.0,6.0,60.0,100.0,40.0
+luganda,Clean Water and Sanitation,claude-sonnet-4-20250514,5,6.4,5.6,100.0,100.0,0.0
+luganda,Clean Water and Sanitation,gemini-2.5-pro,5,6.0,6.0,80.0,100.0,40.0
+luganda,Clean Water and Sanitation,gpt-4.1-2025-04-14,5,4.6,4.6,20.0,60.0,80.0
+luganda,Clean Water and Sanitation,gpt-5-2025-08-07,5,5.2,5.8,40.0,100.0,80.0
+luganda,Climate Action,claude-sonnet-4-20250514,5,5.4,5.8,60.0,100.0,40.0
+luganda,Climate Action,gemini-2.5-pro,5,6.4,6.2,100.0,100.0,20.0
+luganda,Climate Action,gpt-4.1-2025-04-14,5,4.2,4.4,40.0,80.0,60.0
+luganda,Climate Action,gpt-5-2025-08-07,5,6.4,6.2,100.0,100.0,40.0
+luganda,Crime and Law,claude-sonnet-4-20250514,5,6.6,5.8,100.0,100.0,0.0
+luganda,Crime and Law,gemini-2.5-pro,5,6.6,6.8,100.0,100.0,0.0
+luganda,Crime and Law,gpt-4.1-2025-04-14,5,6.0,5.8,60.0,100.0,40.0
+luganda,Crime and Law,gpt-5-2025-08-07,5,6.0,6.2,60.0,100.0,20.0
+luganda,Culture,claude-sonnet-4-20250514,5,5.6,5.2,40.0,100.0,60.0
+luganda,Culture,gemini-2.5-pro,5,6.4,6.0,80.0,100.0,40.0
+luganda,Culture,gpt-4.1-2025-04-14,5,5.0,4.8,20.0,80.0,80.0
+luganda,Culture,gpt-5-2025-08-07,5,5.8,5.8,60.0,100.0,20.0
+luganda,Decent Work and Economic Growth,claude-sonnet-4-20250514,5,6.2,6.2,60.0,100.0,40.0
+luganda,Decent Work and Economic Growth,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,0.0
+luganda,Decent Work and Economic Growth,gpt-4.1-2025-04-14,5,5.8,5.2,60.0,100.0,60.0
+luganda,Decent Work and Economic Growth,gpt-5-2025-08-07,5,6.0,5.8,60.0,100.0,60.0
+luganda,Disasters and Accidents,claude-sonnet-4-20250514,5,6.2,6.2,100.0,100.0,0.0
+luganda,Disasters and Accidents,gemini-2.5-pro,5,6.0,5.8,60.0,80.0,40.0
+luganda,Disasters and Accidents,gpt-4.1-2025-04-14,5,4.4,4.4,0.0,80.0,80.0
+luganda,Disasters and Accidents,gpt-5-2025-08-07,5,5.4,5.2,60.0,80.0,80.0
+luganda,Entertainment,claude-sonnet-4-20250514,5,5.6,5.4,60.0,100.0,40.0
+luganda,Entertainment,gemini-2.5-pro,5,6.0,5.8,80.0,100.0,20.0
+luganda,Entertainment,gpt-4.1-2025-04-14,5,5.0,4.8,40.0,80.0,60.0
+luganda,Entertainment,gpt-5-2025-08-07,5,5.8,5.8,60.0,80.0,40.0
+luganda,Environment,claude-sonnet-4-20250514,5,5.6,5.6,60.0,80.0,40.0
+luganda,Environment,gemini-2.5-pro,5,6.0,6.0,80.0,100.0,20.0
+luganda,Environment,gpt-4.1-2025-04-14,5,4.2,4.4,20.0,80.0,80.0
+luganda,Environment,gpt-5-2025-08-07,5,6.0,5.6,40.0,100.0,60.0
+luganda,Gender Equality,claude-sonnet-4-20250514,5,5.4,5.6,40.0,100.0,60.0
+luganda,Gender Equality,gemini-2.5-pro,5,6.0,6.0,80.0,100.0,20.0
+luganda,Gender Equality,gpt-4.1-2025-04-14,5,5.8,5.4,60.0,100.0,20.0
+luganda,Gender Equality,gpt-5-2025-08-07,5,6.2,6.2,60.0,100.0,20.0
+luganda,Global Partnerships,claude-sonnet-4-20250514,5,5.2,4.8,60.0,80.0,60.0
+luganda,Global Partnerships,gemini-2.5-pro,5,6.2,6.4,100.0,100.0,0.0
+luganda,Global Partnerships,gpt-4.1-2025-04-14,5,5.4,4.4,60.0,80.0,60.0
+luganda,Global Partnerships,gpt-5-2025-08-07,5,6.6,6.0,80.0,80.0,40.0
+luganda,Good Health and Well-Being,claude-sonnet-4-20250514,5,5.8,5.8,60.0,100.0,80.0
+luganda,Good Health and Well-Being,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,20.0
+luganda,Good Health and Well-Being,gpt-4.1-2025-04-14,5,5.8,5.8,60.0,80.0,20.0
+luganda,Good Health and Well-Being,gpt-5-2025-08-07,5,6.0,5.8,80.0,100.0,40.0
+luganda,Health,claude-sonnet-4-20250514,5,5.4,5.4,20.0,80.0,60.0
+luganda,Health,gemini-2.5-pro,5,6.2,6.4,80.0,100.0,20.0
+luganda,Health,gpt-4.1-2025-04-14,5,5.2,4.8,40.0,80.0,80.0
+luganda,Health,gpt-5-2025-08-07,5,5.4,5.6,20.0,100.0,60.0
+luganda,History,claude-sonnet-4-20250514,5,5.6,5.2,60.0,100.0,80.0
+luganda,History,gemini-2.5-pro,5,5.6,5.6,40.0,100.0,60.0
+luganda,History,gpt-4.1-2025-04-14,5,5.4,5.4,40.0,100.0,60.0
+luganda,History,gpt-5-2025-08-07,5,5.8,5.8,80.0,60.0,40.0
+luganda,Hunger and Food Security,claude-sonnet-4-20250514,5,5.4,5.4,60.0,60.0,60.0
+luganda,Hunger and Food Security,gemini-2.5-pro,5,6.6,6.4,80.0,100.0,20.0
+luganda,Hunger and Food Security,gpt-4.1-2025-04-14,5,5.4,5.6,80.0,80.0,60.0
+luganda,Hunger and Food Security,gpt-5-2025-08-07,5,6.6,6.4,80.0,100.0,40.0
+luganda,Industry and Infrastructure,claude-sonnet-4-20250514,5,6.0,5.4,60.0,100.0,60.0
+luganda,Industry and Infrastructure,gemini-2.5-pro,5,6.2,6.2,80.0,100.0,20.0
+luganda,Industry and Infrastructure,gpt-4.1-2025-04-14,5,4.2,3.6,40.0,80.0,80.0
+luganda,Industry and Infrastructure,gpt-5-2025-08-07,5,5.2,5.2,80.0,80.0,60.0
+luganda,Marine Conservation (Life Below Water),claude-sonnet-4-20250514,5,5.8,5.8,80.0,80.0,40.0
+luganda,Marine Conservation (Life Below Water),gemini-2.5-pro,5,6.4,6.4,80.0,100.0,20.0
+luganda,Marine Conservation (Life Below Water),gpt-4.1-2025-04-14,5,5.4,5.2,60.0,100.0,100.0
+luganda,Marine Conservation (Life Below Water),gpt-5-2025-08-07,5,6.2,6.2,60.0,100.0,40.0
+luganda,Peace and Justice,claude-sonnet-4-20250514,5,6.2,6.2,80.0,100.0,20.0
+luganda,Peace and Justice,gemini-2.5-pro,5,6.4,6.2,80.0,100.0,20.0
+luganda,Peace and Justice,gpt-4.1-2025-04-14,5,5.8,6.2,40.0,100.0,40.0
+luganda,Peace and Justice,gpt-5-2025-08-07,5,6.0,6.0,60.0,100.0,40.0
+luganda,Politics,claude-sonnet-4-20250514,5,5.6,4.4,60.0,80.0,40.0
+luganda,Politics,gemini-2.5-pro,5,6.8,6.8,100.0,100.0,0.0
+luganda,Politics,gpt-4.1-2025-04-14,5,5.4,5.0,60.0,80.0,60.0
+luganda,Politics,gpt-5-2025-08-07,5,6.2,6.0,80.0,100.0,40.0
+luganda,Poverty Eradication,claude-sonnet-4-20250514,5,6.0,6.0,80.0,100.0,40.0
+luganda,Poverty Eradication,gemini-2.5-pro,5,6.8,6.6,80.0,100.0,60.0
+luganda,Poverty Eradication,gpt-4.1-2025-04-14,5,5.6,5.2,80.0,80.0,20.0
+luganda,Poverty Eradication,gpt-5-2025-08-07,5,6.2,6.0,100.0,100.0,20.0
+luganda,Quality Education,claude-sonnet-4-20250514,5,6.2,6.2,80.0,100.0,20.0
+luganda,Quality Education,gemini-2.5-pro,5,6.2,6.0,80.0,80.0,40.0
+luganda,Quality Education,gpt-4.1-2025-04-14,5,5.4,5.0,0.0,80.0,100.0
+luganda,Quality Education,gpt-5-2025-08-07,5,5.6,5.6,40.0,80.0,80.0
+luganda,Reducing Inequality,claude-sonnet-4-20250514,5,5.8,4.4,40.0,100.0,60.0
+luganda,Reducing Inequality,gemini-2.5-pro,5,6.0,6.0,80.0,100.0,20.0
+luganda,Reducing Inequality,gpt-4.1-2025-04-14,5,6.2,6.2,80.0,100.0,20.0
+luganda,Reducing Inequality,gpt-5-2025-08-07,5,5.4,5.6,40.0,100.0,40.0
+luganda,Responsible Consumption,claude-sonnet-4-20250514,5,6.0,6.0,60.0,100.0,40.0
+luganda,Responsible Consumption,gemini-2.5-pro,5,6.0,6.2,80.0,100.0,20.0
+luganda,Responsible Consumption,gpt-4.1-2025-04-14,5,5.6,5.4,60.0,80.0,60.0
+luganda,Responsible Consumption,gpt-5-2025-08-07,5,5.4,5.2,40.0,100.0,80.0
+luganda,Safety,claude-sonnet-4-20250514,5,5.8,6.0,80.0,100.0,0.0
+luganda,Safety,gemini-2.5-pro,5,6.2,6.4,100.0,100.0,20.0
+luganda,Safety,gpt-4.1-2025-04-14,5,3.8,4.0,20.0,20.0,80.0
+luganda,Safety,gpt-5-2025-08-07,5,6.0,5.8,40.0,100.0,60.0
+luganda,Science and Technology,claude-sonnet-4-20250514,5,5.0,5.0,20.0,60.0,80.0
+luganda,Science and Technology,gemini-2.5-pro,5,6.4,6.4,100.0,100.0,0.0
+luganda,Science and Technology,gpt-4.1-2025-04-14,5,4.6,4.4,20.0,60.0,100.0
+luganda,Science and Technology,gpt-5-2025-08-07,5,5.0,4.4,0.0,80.0,80.0
+luganda,Sports,claude-sonnet-4-20250514,5,4.4,4.2,60.0,40.0,100.0
+luganda,Sports,gemini-2.5-pro,5,6.4,6.2,80.0,100.0,40.0
+luganda,Sports,gpt-4.1-2025-04-14,5,3.2,3.4,40.0,80.0,80.0
+luganda,Sports,gpt-5-2025-08-07,5,5.6,5.4,60.0,80.0,60.0
+luganda,Sustainable Cities,claude-sonnet-4-20250514,5,6.0,5.2,60.0,80.0,40.0
+luganda,Sustainable Cities,gemini-2.5-pro,5,5.8,6.0,60.0,100.0,40.0
+luganda,Sustainable Cities,gpt-4.1-2025-04-14,5,4.8,4.4,0.0,80.0,80.0
+luganda,Sustainable Cities,gpt-5-2025-08-07,5,5.8,5.4,40.0,80.0,80.0
+luganda,Terrestrial Ecosystems (Life on Land),claude-sonnet-4-20250514,5,5.4,4.8,60.0,100.0,40.0
+luganda,Terrestrial Ecosystems (Life on Land),gemini-2.5-pro,5,5.4,5.4,60.0,60.0,40.0
+luganda,Terrestrial Ecosystems (Life on Land),gpt-4.1-2025-04-14,5,4.4,4.2,0.0,80.0,100.0
+luganda,Terrestrial Ecosystems (Life on Land),gpt-5-2025-08-07,5,5.6,5.4,80.0,100.0,20.0
+luganda,Tourism,claude-sonnet-4-20250514,5,5.8,5.8,80.0,100.0,20.0
+luganda,Tourism,gemini-2.5-pro,5,6.4,6.6,100.0,100.0,20.0
+luganda,Tourism,gpt-4.1-2025-04-14,5,6.0,6.0,80.0,100.0,20.0
+luganda,Tourism,gpt-5-2025-08-07,5,6.2,6.4,80.0,100.0,0.0
+luganda,Travel,claude-sonnet-4-20250514,5,5.8,5.8,20.0,100.0,80.0
+luganda,Travel,gemini-2.5-pro,5,6.6,7.0,100.0,100.0,0.0
+luganda,Travel,gpt-4.1-2025-04-14,5,4.8,4.8,60.0,80.0,80.0
+luganda,Travel,gpt-5-2025-08-07,5,5.4,5.6,60.0,100.0,40.0
+luganda,Weather,claude-sonnet-4-20250514,5,5.8,5.8,20.0,100.0,80.0
+luganda,Weather,gemini-2.5-pro,5,6.2,6.2,80.0,100.0,40.0
+luganda,Weather,gpt-4.1-2025-04-14,5,5.0,5.0,40.0,100.0,40.0
+luganda,Weather,gpt-5-2025-08-07,5,6.0,6.0,60.0,100.0,40.0
