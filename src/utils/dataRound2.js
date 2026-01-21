@@ -89,17 +89,17 @@ const formatModelName = (modelName) => {
 };
 
 const MODEL_ORDER = [
-  // Claude
+  // Claude (oldest to newest)
   'claude-3-5-sonnet-20241022',
   'claude-sonnet-4-20250514',
   
-  // Gemini
+  // Gemini (oldest to newest)
   'gemini-2.5-pro',
   
-  // OpenAI
-  'gpt-4.1-2025-04-14',
-  'gpt-5-2025-08-07',
-  'gpt-4o-2024-11-20'
+  // OpenAI (oldest to newest)
+  'gpt-4o-2024-11-20',  // Nov 2024 - oldest
+  'gpt-4.1-2025-04-14', // Apr 2025
+  'gpt-5-2025-08-07'    // Aug 2025 - newest
 ];
 
 export const loadData = async (reviewer = 'primary') => {
@@ -280,8 +280,16 @@ const processData = (data) => {
       return stats;
     }).filter(Boolean); // Remove any null entries
 
-    // Sort models by defined order
-    modelStats = _.sortBy(modelStats, ['orderIndex', 'name']);
+    // Sort models: first by provider (Anthropic, Google, OpenAI), then by orderIndex (oldest to newest) within each provider
+    const providerOrder = { 'claude': 1, 'google': 2, 'openai': 3, 'other': 4 };
+    modelStats = modelStats.sort((a, b) => {
+      const providerA = getProvider(a.id);
+      const providerB = getProvider(b.id);
+      const providerDiff = (providerOrder[providerA] || 99) - (providerOrder[providerB] || 99);
+      if (providerDiff !== 0) return providerDiff;
+      // Within same provider, sort by orderIndex (oldest to newest)
+      return a.orderIndex - b.orderIndex;
+    });
 
     // Find winners
     const winners = {
