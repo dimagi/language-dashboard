@@ -12,17 +12,22 @@ function DashboardRound2({ theme, toggleTheme }) {
     const navigate = useNavigate();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [reviewer, setReviewer] = useState('primary');
-    const [metric, setMetric] = useState('readability');
+    
+    // Read URL params on initial mount to set initial state
+    const initialParams = getURLParams();
+    const [reviewer, setReviewer] = useState(initialParams.reviewer === 'secondary' ? 'secondary' : 'primary');
+    const [metric, setMetric] = useState(initialParams.metric && ['readability', 'adequacy', 'grammatically_correct', 'real_words', 'notable_error'].includes(initialParams.metric) ? initialParams.metric : 'readability');
+    
     const [visibleModels, setVisibleModels] = useState(new Set());
     const [allModels, setAllModels] = useState([]);
     const [toasts, setToasts] = useState([]);
-    const [selectedLanguage, setSelectedLanguage] = useState(null);
-    const [selectedLanguageGroup, setSelectedLanguageGroup] = useState(null);
+    const [selectedLanguage, setSelectedLanguage] = useState(initialParams.lang ? decodeURIComponent(initialParams.lang) : null);
+    const [selectedLanguageGroup, setSelectedLanguageGroup] = useState(initialParams.group ? decodeURIComponent(initialParams.group) : null);
     const [showLanguageSelector, setShowLanguageSelector] = useState(false);
     const [showGroupSelector, setShowGroupSelector] = useState(false);
     const languageSelectorRef = useRef(null);
     const groupSelectorRef = useRef(null);
+    const isInitialLoad = useRef(true);
 
     // Close selectors when clicking outside
     useEffect(() => {
@@ -80,7 +85,42 @@ function DashboardRound2({ theme, toggleTheme }) {
                 setAllModels(uniqueModels);
 
                 const validModels = new Set(uniqueModels.map(m => m.id));
+                
+                // Check URL params for models before setting defaults
+                const params = getURLParams();
+                let modelsFromURL = null;
+                
+                if (params.providers) {
+                    const providers = new Set(params.providers.split(','));
+                    const urlVisible = new Set();
+                    uniqueModels.forEach(m => {
+                        if (providers.has(getProvider(m.id))) {
+                            urlVisible.add(m.id);
+                        }
+                    });
+                    if (urlVisible.size > 0) {
+                        modelsFromURL = urlVisible;
+                    }
+                } else if (params.models) {
+                    const modelIds = new Set(params.models.split(','));
+                    const urlVisible = new Set();
+                    uniqueModels.forEach(m => {
+                        if (modelIds.has(m.id)) {
+                            urlVisible.add(m.id);
+                        }
+                    });
+                    if (urlVisible.size > 0) {
+                        modelsFromURL = urlVisible;
+                    }
+                }
+                
                 setVisibleModels(prev => {
+                    // If we have models from URL, use those
+                    if (modelsFromURL && modelsFromURL.size > 0) {
+                        return modelsFromURL;
+                    }
+                    
+                    // Otherwise, use existing logic
                     if (prev.size === 0) return validModels;
 
                     let hasOverlap = false;
@@ -112,17 +152,18 @@ function DashboardRound2({ theme, toggleTheme }) {
 
         const params = getURLParams();
         
-        // Read metric from URL
+        // Read metric from URL (only if different from current)
         if (params.metric && ['readability', 'adequacy', 'grammatically_correct', 'real_words', 'notable_error'].includes(params.metric)) {
-            setMetric(params.metric);
+            setMetric(prev => prev !== params.metric ? params.metric : prev);
         }
         
-        // Read reviewer from URL
+        // Read reviewer from URL (only if different from current)
         if (params.reviewer && ['primary', 'secondary'].includes(params.reviewer)) {
-            setReviewer(params.reviewer);
+            setReviewer(prev => prev !== params.reviewer ? params.reviewer : prev);
         }
         
         // Read models from URL (can be providers or individual models)
+        // Only update if URL params exist and current state doesn't match
         if (params.providers) {
             const providers = new Set(params.providers.split(','));
             const newVisible = new Set();
@@ -131,7 +172,13 @@ function DashboardRound2({ theme, toggleTheme }) {
                     newVisible.add(m.id);
                 }
             });
-            setVisibleModels(newVisible);
+            // Only update if different
+            setVisibleModels(prev => {
+                if (prev.size !== newVisible.size || !Array.from(prev).every(id => newVisible.has(id))) {
+                    return newVisible;
+                }
+                return prev;
+            });
         } else if (params.models) {
             const modelIds = new Set(params.models.split(','));
             const newVisible = new Set();
@@ -141,20 +188,29 @@ function DashboardRound2({ theme, toggleTheme }) {
                 }
             });
             if (newVisible.size > 0) {
-                setVisibleModels(newVisible);
+                // Only update if different
+                setVisibleModels(prev => {
+                    if (prev.size !== newVisible.size || !Array.from(prev).every(id => newVisible.has(id))) {
+                        return newVisible;
+                    }
+                    return prev;
+                });
             }
-        } else if (visibleModels.size === 0) {
+        } else if (visibleModels.size === 0 && !params.providers && !params.models) {
+            // Only set all models if no URL params exist
             setVisibleModels(new Set(allModels.map(m => m.id)));
         }
         
         // Read language/group from URL
         if (params.group) {
-            setSelectedLanguageGroup(decodeURIComponent(params.group));
+            const decodedGroup = decodeURIComponent(params.group);
+            setSelectedLanguageGroup(prev => prev !== decodedGroup ? decodedGroup : prev);
             setSelectedLanguage(null);
         } else if (params.lang) {
-            setSelectedLanguage(decodeURIComponent(params.lang));
+            const decodedLang = decodeURIComponent(params.lang);
+            setSelectedLanguage(prev => prev !== decodedLang ? decodedLang : prev);
             setSelectedLanguageGroup(null);
-        } else {
+        } else if (isInitialLoad.current) {
             setSelectedLanguage(null);
             setSelectedLanguageGroup(null);
         }
@@ -175,7 +231,14 @@ function DashboardRound2({ theme, toggleTheme }) {
 
     // Sync URL params with state on mount and when URL changes
     useEffect(() => {
+        if (allModels.length === 0) return;
+        
         syncStateFromURL.current();
+        
+        // Mark initial load as complete after first sync
+        if (isInitialLoad.current) {
+            isInitialLoad.current = false;
+        }
     }, [allModels]);
 
     // Handle browser back/forward navigation
@@ -187,8 +250,10 @@ function DashboardRound2({ theme, toggleTheme }) {
         return () => window.removeEventListener('popstate', handlePopState);
     }, [allModels]);
 
-    // Update URL when metric changes
+    // Update URL when metric changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (metric && metric !== 'readability') {
             updateURLParams({ metric });
         } else if (metric === 'readability') {
@@ -199,8 +264,10 @@ function DashboardRound2({ theme, toggleTheme }) {
         }
     }, [metric]);
 
-    // Update URL when reviewer changes
+    // Update URL when reviewer changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (reviewer && reviewer !== 'primary') {
             updateURLParams({ reviewer });
         } else if (reviewer === 'primary') {
@@ -211,9 +278,9 @@ function DashboardRound2({ theme, toggleTheme }) {
         }
     }, [reviewer]);
 
-    // Update URL when visible models change
+    // Update URL when visible models change (skip during initial load)
     useEffect(() => {
-        if (allModels.length === 0) return;
+        if (allModels.length === 0 || isInitialLoad.current) return;
         
         const params = getURLParams();
         const activeProviders = new Set();
@@ -261,8 +328,10 @@ function DashboardRound2({ theme, toggleTheme }) {
         }
     }, [visibleModels, allModels]);
 
-    // Update URL when language/group changes
+    // Update URL when language/group changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (selectedLanguageGroup) {
             updateURLParams({ 
                 group: selectedLanguageGroup,
