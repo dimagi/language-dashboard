@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Check, Download, X, ChevronDown, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { updateURLParams } from '../utils/urlParams';
 
 // Metric definitions for Round 3
 const METRIC_DEFINITIONS = {
@@ -213,7 +214,14 @@ const Controls = ({
                         {['clarity', 'naturalness', 'correctness'].map(m => (
                             <button
                                 key={m}
-                                onClick={() => setMetric(m)}
+                                onClick={() => {
+                                    setMetric(m);
+                                    if (m !== 'clarity') {
+                                        updateURLParams({ metric: m });
+                                    } else {
+                                        updateURLParams({ metric: null });
+                                    }
+                                }}
                                 className={`btn ${metric === m ? 'btn-active' : ''}`}
                                 title={METRIC_DEFINITIONS[m]}
                                 style={{ position: 'relative' }}
@@ -258,13 +266,19 @@ const Controls = ({
                         <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 500 }}>Data Source:</span>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => setDataSource('primary')}
+                                onClick={() => {
+                                    setDataSource('primary');
+                                    updateURLParams({ source: null });
+                                }}
                                 className={`btn btn-toggle ${dataSource === 'primary' ? 'btn-toggle-active' : ''}`}
                             >
                                 Primary
                             </button>
                             <button
-                                onClick={() => setDataSource('secondary')}
+                                onClick={() => {
+                                    setDataSource('secondary');
+                                    updateURLParams({ source: 'secondary' });
+                                }}
                                 className={`btn btn-toggle ${dataSource === 'secondary' ? 'btn-toggle-active' : ''}`}
                             >
                                 Secondary
@@ -592,9 +606,7 @@ const Controls = ({
                                                 setSelectedLanguage(langData.language);
                                             }
                                             setShowLanguageMenu(false);
-                                            const params = new URLSearchParams(window.location.search);
-                                            params.set('lang', langData.language);
-                                            navigate(`${window.location.pathname}?${params.toString()}`);
+                                            updateURLParams({ lang: langData.language });
                                             setTimeout(() => {
                                                 const element = document.getElementById(`lang-${langData.language}`);
                                                 if (element) {
