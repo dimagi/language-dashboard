@@ -15,11 +15,14 @@ export default defineConfig({
           join(__dirname, 'public/CNAME'),
           join(__dirname, 'dist/CNAME')
         )
-        // Copy 404.html to dist after build (for GitHub Pages routing)
+        // Copy 404.html to dist (with redirect script for GitHub Pages SPA routing)
+        // The 404.html contains a script that redirects to index.html with the path
+        // encoded in the query string, which is then restored by the script in index.html
         copyFileSync(
           join(__dirname, 'public/404.html'),
           join(__dirname, 'dist/404.html')
         )
+        console.log('✅ CNAME and 404.html copied to dist')
       }
     }
   ],
