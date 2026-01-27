@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Check, Download, X, ChevronDown, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { updateURLParams } from '../utils/urlParams';
 
 // Metric definitions for Round 2
 const METRIC_DEFINITIONS = {
@@ -235,7 +236,14 @@ const Controls = ({
                         {Object.keys(metricLabels).map(m => (
                             <button
                                 key={m}
-                                onClick={() => setMetric(m)}
+                                onClick={() => {
+                                    setMetric(m);
+                                    if (m !== 'readability') {
+                                        updateURLParams({ metric: m });
+                                    } else {
+                                        updateURLParams({ metric: null });
+                                    }
+                                }}
                                 className={`btn ${metric === m ? 'btn-active' : ''}`}
                                 style={{ fontSize: '0.75rem', padding: '0.5rem 0.75rem', position: 'relative' }}
                                 title={METRIC_DEFINITIONS[m]}
@@ -280,13 +288,19 @@ const Controls = ({
                         <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 500 }}>Reviewer:</span>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => setReviewer('primary')}
+                                onClick={() => {
+                                    setReviewer('primary');
+                                    updateURLParams({ reviewer: null });
+                                }}
                                 className={`btn btn-toggle ${reviewer === 'primary' ? 'btn-toggle-active' : ''}`}
                             >
                                 Primary
                             </button>
                             <button
-                                onClick={() => setReviewer('secondary')}
+                                onClick={() => {
+                                    setReviewer('secondary');
+                                    updateURLParams({ reviewer: 'secondary' });
+                                }}
                                 className={`btn btn-toggle ${reviewer === 'secondary' ? 'btn-toggle-active' : ''}`}
                             >
                                 Secondary
@@ -585,10 +599,7 @@ const Controls = ({
                                     setSelectedLanguage(null);
                                     setSelectedLanguageGroup(null);
                                     setShowLanguageMenu(false);
-                                    const params = new URLSearchParams(window.location.search);
-                                    params.delete('lang');
-                                    params.delete('group');
-                                    navigate(`${window.location.pathname}?${params.toString()}`);
+                                    updateURLParams({ lang: null, group: null });
                                 }}
                                 className="btn"
                                 style={{
@@ -612,10 +623,7 @@ const Controls = ({
                                         setSelectedLanguage(langData.language);
                                         setSelectedLanguageGroup(null);
                                         setShowLanguageMenu(false);
-                                        const params = new URLSearchParams(window.location.search);
-                                        params.set('lang', langData.language);
-                                        params.delete('group');
-                                        navigate(`${window.location.pathname}?${params.toString()}`);
+                                        updateURLParams({ lang: langData.language, group: null });
                                         setTimeout(() => {
                                             const element = document.getElementById(`lang-${langData.language}`);
                                             if (element) {

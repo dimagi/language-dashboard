@@ -5,6 +5,7 @@ import Controls from '../components/ControlsRound2';
 import { Trophy, BarChart3, Loader2, ArrowLeft, Sun, Moon, Users, Cpu, Database, ChevronDown, Globe } from 'lucide-react';
 import { ToastContainer } from '../components/Toast';
 import { Link, useNavigate } from 'react-router-dom';
+import { updateURLParams, getURLParams } from '../utils/urlParams';
 import _ from 'lodash';
 
 function DashboardRound2({ theme, toggleTheme }) {
@@ -105,17 +106,25 @@ function DashboardRound2({ theme, toggleTheme }) {
         fetchData();
     }, [reviewer]);
 
-    // Handle URL params
-    useEffect(() => {
+    // Function to read URL params and update state
+    const syncStateFromURL = useRef(() => {
         if (allModels.length === 0) return;
 
-        const params = new URLSearchParams(window.location.search);
-        const providersParam = params.get('providers');
-        const langParam = params.get('lang');
-        const groupParam = params.get('group');
-
-        if (providersParam) {
-            const providers = new Set(providersParam.split(','));
+        const params = getURLParams();
+        
+        // Read metric from URL
+        if (params.metric && ['readability', 'adequacy', 'grammatically_correct', 'real_words', 'notable_error'].includes(params.metric)) {
+            setMetric(params.metric);
+        }
+        
+        // Read reviewer from URL
+        if (params.reviewer && ['primary', 'secondary'].includes(params.reviewer)) {
+            setReviewer(params.reviewer);
+        }
+        
+        // Read models from URL (can be providers or individual models)
+        if (params.providers) {
+            const providers = new Set(params.providers.split(','));
             const newVisible = new Set();
             allModels.forEach(m => {
                 if (providers.has(getProvider(m.id))) {
@@ -123,15 +132,27 @@ function DashboardRound2({ theme, toggleTheme }) {
                 }
             });
             setVisibleModels(newVisible);
+        } else if (params.models) {
+            const modelIds = new Set(params.models.split(','));
+            const newVisible = new Set();
+            allModels.forEach(m => {
+                if (modelIds.has(m.id)) {
+                    newVisible.add(m.id);
+                }
+            });
+            if (newVisible.size > 0) {
+                setVisibleModels(newVisible);
+            }
         } else if (visibleModels.size === 0) {
             setVisibleModels(new Set(allModels.map(m => m.id)));
         }
-
-        if (groupParam) {
-            setSelectedLanguageGroup(decodeURIComponent(groupParam));
+        
+        // Read language/group from URL
+        if (params.group) {
+            setSelectedLanguageGroup(decodeURIComponent(params.group));
             setSelectedLanguage(null);
-        } else if (langParam) {
-            setSelectedLanguage(decodeURIComponent(langParam));
+        } else if (params.lang) {
+            setSelectedLanguage(decodeURIComponent(params.lang));
             setSelectedLanguageGroup(null);
         } else {
             setSelectedLanguage(null);
@@ -139,7 +160,7 @@ function DashboardRound2({ theme, toggleTheme }) {
         }
 
         // Scroll to language if hash is present
-        if (langParam || groupParam) {
+        if (params.lang || params.group) {
             setTimeout(() => {
                 const hash = window.location.hash.replace('#', '');
                 if (hash) {
@@ -150,7 +171,119 @@ function DashboardRound2({ theme, toggleTheme }) {
                 }
             }, 500);
         }
+    });
+
+    // Sync URL params with state on mount and when URL changes
+    useEffect(() => {
+        syncStateFromURL.current();
     }, [allModels]);
+
+    // Handle browser back/forward navigation
+    useEffect(() => {
+        const handlePopState = () => {
+            syncStateFromURL.current();
+        };
+        window.addEventListener('popstate', handlePopState);
+        return () => window.removeEventListener('popstate', handlePopState);
+    }, [allModels]);
+
+    // Update URL when metric changes
+    useEffect(() => {
+        if (metric && metric !== 'readability') {
+            updateURLParams({ metric });
+        } else if (metric === 'readability') {
+            const params = getURLParams();
+            if (params.metric === 'readability') {
+                updateURLParams({ metric: null });
+            }
+        }
+    }, [metric]);
+
+    // Update URL when reviewer changes
+    useEffect(() => {
+        if (reviewer && reviewer !== 'primary') {
+            updateURLParams({ reviewer });
+        } else if (reviewer === 'primary') {
+            const params = getURLParams();
+            if (params.reviewer === 'primary') {
+                updateURLParams({ reviewer: null });
+            }
+        }
+    }, [reviewer]);
+
+    // Update URL when visible models change
+    useEffect(() => {
+        if (allModels.length === 0) return;
+        
+        const params = getURLParams();
+        const activeProviders = new Set();
+        const activeModels = [];
+        
+        allModels.forEach(m => {
+            if (visibleModels.has(m.id)) {
+                activeProviders.add(getProvider(m.id));
+                activeModels.push(m.id);
+            }
+        });
+        
+        // Determine if we should use providers or individual models
+        const allModelsForProviders = new Set();
+        activeProviders.forEach(provider => {
+            allModels.filter(m => getProvider(m.id) === provider).forEach(m => {
+                allModelsForProviders.add(m.id);
+            });
+        });
+        
+        // If all models of active providers are visible, use providers param
+        // Otherwise, use individual models param
+        const useProviders = activeProviders.size > 0 && 
+            allModelsForProviders.size === activeModels.length &&
+            Array.from(allModelsForProviders).every(id => visibleModels.has(id));
+        
+        if (useProviders && activeProviders.size < 3) {
+            // Only set providers if not all providers are selected
+            updateURLParams({ 
+                providers: Array.from(activeProviders).join(','),
+                models: null 
+            });
+        } else if (activeModels.length < allModels.length) {
+            // Use individual models if subset is selected
+            updateURLParams({ 
+                models: activeModels.join(','),
+                providers: null 
+            });
+        } else {
+            // Clear both if all models are visible
+            updateURLParams({ 
+                providers: null,
+                models: null 
+            });
+        }
+    }, [visibleModels, allModels]);
+
+    // Update URL when language/group changes
+    useEffect(() => {
+        if (selectedLanguageGroup) {
+            updateURLParams({ 
+                group: selectedLanguageGroup,
+                lang: null 
+            });
+        } else if (selectedLanguage) {
+            updateURLParams({ 
+                lang: selectedLanguage,
+                group: null 
+            });
+        } else {
+            const params = getURLParams();
+            if (params.lang || params.group) {
+                updateURLParams({ 
+                    lang: null,
+                    group: null 
+                });
+            }
+        }
+    }, [selectedLanguage, selectedLanguageGroup]);
+
 
     const toggleProvider = (provider) => {
         setVisibleModels(prev => {
