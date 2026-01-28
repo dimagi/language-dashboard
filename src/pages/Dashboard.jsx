@@ -11,14 +11,19 @@ import _ from 'lodash';
 function Dashboard({ theme, toggleTheme }) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [dataSource, setDataSource] = useState('primary');
-    const [metric, setMetric] = useState('clarity');
+    
+    // Read URL params on initial mount to set initial state
+    const initialParams = getURLParams();
+    const [dataSource, setDataSource] = useState(initialParams.source === 'secondary' ? 'secondary' : 'primary');
+    const [metric, setMetric] = useState(initialParams.metric && ['clarity', 'naturalness', 'correctness'].includes(initialParams.metric) ? initialParams.metric : 'clarity');
+    
     const [visibleModels, setVisibleModels] = useState(new Set());
     const [allModels, setAllModels] = useState([]);
     const [toasts, setToasts] = useState([]);
-    const [selectedLanguage, setSelectedLanguage] = useState(null);
+    const [selectedLanguage, setSelectedLanguage] = useState(initialParams.lang ? decodeURIComponent(initialParams.lang) : null);
     const [showLanguageSelector, setShowLanguageSelector] = useState(false);
     const languageSelectorRef = useRef(null);
+    const isInitialLoad = useRef(true);
 
     // Close language selector when clicking outside
     useEffect(() => {
@@ -73,7 +78,42 @@ function Dashboard({ theme, toggleTheme }) {
                 setAllModels(uniqueModels);
 
                 const validModels = new Set(uniqueModels.map(m => m.id));
+                
+                // Check URL params for models before setting defaults
+                const params = getURLParams();
+                let modelsFromURL = null;
+                
+                if (params.providers) {
+                    const providers = new Set(params.providers.split(','));
+                    const urlVisible = new Set();
+                    uniqueModels.forEach(m => {
+                        if (providers.has(getProvider(m.id))) {
+                            urlVisible.add(m.id);
+                        }
+                    });
+                    if (urlVisible.size > 0) {
+                        modelsFromURL = urlVisible;
+                    }
+                } else if (params.models) {
+                    const modelIds = new Set(params.models.split(','));
+                    const urlVisible = new Set();
+                    uniqueModels.forEach(m => {
+                        if (modelIds.has(m.id)) {
+                            urlVisible.add(m.id);
+                        }
+                    });
+                    if (urlVisible.size > 0) {
+                        modelsFromURL = urlVisible;
+                    }
+                }
+                
                 setVisibleModels(prev => {
+                    // If we have models from URL, use those
+                    if (modelsFromURL && modelsFromURL.size > 0) {
+                        return modelsFromURL;
+                    }
+                    
+                    // Otherwise, use existing logic
                     if (prev.size === 0) return validModels;
 
                     let hasOverlap = false;
@@ -105,17 +145,18 @@ function Dashboard({ theme, toggleTheme }) {
 
         const params = getURLParams();
         
-        // Read metric from URL
+        // Read metric from URL (only if different from current)
         if (params.metric && ['clarity', 'naturalness', 'correctness'].includes(params.metric)) {
-            setMetric(params.metric);
+            setMetric(prev => prev !== params.metric ? params.metric : prev);
         }
         
-        // Read dataSource from URL
+        // Read dataSource from URL (only if different from current)
         if (params.source && ['primary', 'secondary'].includes(params.source)) {
-            setDataSource(params.source);
+            setDataSource(prev => prev !== params.source ? params.source : prev);
         }
         
         // Read models from URL (can be providers or individual models)
+        // Only update if URL params exist and current state doesn't match
         if (params.providers) {
             const providers = new Set(params.providers.split(','));
             const newVisible = new Set();
@@ -124,7 +165,13 @@ function Dashboard({ theme, toggleTheme }) {
                     newVisible.add(m.id);
                 }
             });
-            setVisibleModels(newVisible);
+            // Only update if different
+            setVisibleModels(prev => {
+                if (prev.size !== newVisible.size || !Array.from(prev).every(id => newVisible.has(id))) {
+                    return newVisible;
+                }
+                return prev;
+            });
         } else if (params.models) {
             const modelIds = new Set(params.models.split(','));
             const newVisible = new Set();
@@ -134,31 +181,46 @@ function Dashboard({ theme, toggleTheme }) {
                 }
             });
             if (newVisible.size > 0) {
-                setVisibleModels(newVisible);
+                // Only update if different
+                setVisibleModels(prev => {
+                    if (prev.size !== newVisible.size || !Array.from(prev).every(id => newVisible.has(id))) {
+                        return newVisible;
+                    }
+                    return prev;
+                });
             }
-        } else if (visibleModels.size === 0) {
+        } else if (visibleModels.size === 0 && !params.providers && !params.models) {
+            // Only set all models if no URL params exist
             setVisibleModels(new Set(allModels.map(m => m.id)));
         }
         
         // Read language from URL
         if (params.lang) {
-            setSelectedLanguage(decodeURIComponent(params.lang));
+            const decodedLang = decodeURIComponent(params.lang);
+            setSelectedLanguage(prev => prev !== decodedLang ? decodedLang : prev);
             setTimeout(() => {
-                const element = document.getElementById(`lang-${decodeURIComponent(params.lang)}`);
+                const element = document.getElementById(`lang-${decodedLang}`);
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                     element.classList.add('highlight-card');
                     setTimeout(() => element.classList.remove('highlight-card'), 2000);
                 }
             }, 500);
-        } else {
+        } else if (!params.lang && isInitialLoad.current) {
             setSelectedLanguage(null);
         }
     });
 
     // Sync URL params with state on mount and when URL changes
     useEffect(() => {
+        if (allModels.length === 0) return;
+        
         syncStateFromURL.current();
+        
+        // Mark initial load as complete after first sync
+        if (isInitialLoad.current) {
+            isInitialLoad.current = false;
+        }
     }, [allModels]);
 
     // Handle browser back/forward navigation
@@ -170,8 +232,10 @@ function Dashboard({ theme, toggleTheme }) {
         return () => window.removeEventListener('popstate', handlePopState);
     }, [allModels]);
 
-    // Update URL when metric changes
+    // Update URL when metric changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (metric && metric !== 'clarity') {
             updateURLParams({ metric });
         } else if (metric === 'clarity') {
@@ -182,8 +246,10 @@ function Dashboard({ theme, toggleTheme }) {
         }
     }, [metric]);
 
-    // Update URL when dataSource changes
+    // Update URL when dataSource changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (dataSource && dataSource !== 'primary') {
             updateURLParams({ source: dataSource });
         } else if (dataSource === 'primary') {
@@ -194,9 +260,9 @@ function Dashboard({ theme, toggleTheme }) {
         }
     }, [dataSource]);
 
-    // Update URL when visible models change
+    // Update URL when visible models change (skip during initial load)
     useEffect(() => {
-        if (allModels.length === 0) return;
+        if (allModels.length === 0 || isInitialLoad.current) return;
         
         const params = getURLParams();
         const activeProviders = new Set();
@@ -244,8 +310,10 @@ function Dashboard({ theme, toggleTheme }) {
         }
     }, [visibleModels, allModels]);
 
-    // Update URL when language changes
+    // Update URL when language changes (skip during initial load)
     useEffect(() => {
+        if (isInitialLoad.current) return;
+        
         if (selectedLanguage) {
             updateURLParams({ lang: selectedLanguage });
         } else {
