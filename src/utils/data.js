@@ -55,11 +55,11 @@ const getModelColor = (modelName, index, groupIndex) => {
 const formatModelName = (modelName) => {
   return modelName
     .replace(/bedrock-/i, '')
+    .replace(/-\d{4}-\d{2}-\d{2}/g, '') // Remove YYYY-MM-DD dates like 2025-04-14
     .replace(/-/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase())
     .replace(/Claude 3 5/i, 'Claude 3.5')
-    .replace(/Gpt 4/i, 'GPT-4')
-    .replace(/Gpt 4o/i, 'GPT-4o')
+    .replace(/Gpt/gi, 'GPT') // Capitalize all GPT references
     .replace(/\d{8}/g, '') // Remove 8-digit dates like 20241022
     .replace(/v\d+/i, '') // Remove version numbers like v1, v2 if standalone
     .trim();
@@ -92,6 +92,11 @@ export const loadData = async (source = 'primary') => {
         row.target_language_name = capitalizedLang;
       }
 
+      // Normalize language names (fix inconsistent naming like "NigerianPidgin" -> "Nigerian Pidgin")
+      if (row.target_language_name === 'NigerianPidgin') {
+        row.target_language_name = 'Nigerian Pidgin';
+      }
+
       allData.push(row);
     });
   });
@@ -111,14 +116,17 @@ const MODEL_ORDER = [
   'gemini-2.5-flash-lite',
   'gemini-2.5-flash',
   'gemini-2.5-pro',
+  'gemini-3-flash-preview',
   'gemini-3-pro-preview',
 
   // OpenAI (oldest to newest)
-  'gpt-4.1',      // Apr 2025
-  'gpt-5-nano',   // Smaller/older variant
-  'gpt-5-mini',   // Medium variant
-  'gpt-5',        // Base model
-  'gpt-5.1'       // Latest variant
+  'gpt-4.1',             // Apr 2025 (without date suffix)
+  'gpt-4.1-2025-04-14',  // Apr 2025 (with date suffix)
+  'gpt-5-nano',          // Smaller/older variant
+  'gpt-5-mini',          // Medium variant
+  'gpt-5',               // Base model
+  'gpt-5.1',             // Nov 2025
+  'gpt-5.2-2025-12-11'   // Dec 2025
 ];
 
 const processData = (data) => {
@@ -130,10 +138,6 @@ const processData = (data) => {
     const models = _.groupBy(rows, 'model');
 
     let modelStats = Object.keys(models)
-      .filter((modelKey) => {
-        // Filter out Google models for Round 3
-        return !MODEL_PATTERNS.google.test(modelKey);
-      })
       .map((modelKey) => {
       const modelRows = models[modelKey];
 

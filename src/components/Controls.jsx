@@ -299,7 +299,7 @@ const Controls = ({
                 <div className="flex gap-4 items-center justify-between" style={{ flexWrap: 'wrap', paddingTop: '0.5rem', borderTop: '1px solid var(--border-color)', marginTop: '0.5rem' }}>
                     <div className="flex gap-4 items-center" style={{ flexWrap: 'wrap' }}>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold', marginRight: '0.5rem' }}>Providers:</span>
-                    {['claude', 'openai'].map(provider => {
+                    {['claude', 'google', 'openai'].map(provider => {
                         const state = getProviderState(provider);
                         const providerModels = getProviderModels(provider);
                         const isMenuOpen = openProviderMenu === provider;
