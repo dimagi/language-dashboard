@@ -83,6 +83,75 @@ function LandingPage({ theme, toggleTheme }) {
                     return currentAvg > bestAvg ? current : best;
                 }, null);
 
+                // Calculate leaders for each metric
+                const metricLeaders = {
+                    clarity: { name: null, score: -Infinity },
+                    naturalness: { name: null, score: -Infinity },
+                    correctness: { name: null, score: -Infinity },
+                    critical_error: { name: null, score: Infinity } // Lower is better
+                };
+
+                const metricAverages = {
+                    clarity: {},
+                    naturalness: {},
+                    correctness: {},
+                    critical_error: {}
+                };
+
+                data.forEach(lang => {
+                    lang.models.forEach(model => {
+                        // Clarity
+                        if (!metricAverages.clarity[model.id]) {
+                            metricAverages.clarity[model.id] = { name: model.name, total: 0, count: 0 };
+                        }
+                        metricAverages.clarity[model.id].total += model.metrics.clarity.mean;
+                        metricAverages.clarity[model.id].count++;
+
+                        // Naturalness
+                        if (!metricAverages.naturalness[model.id]) {
+                            metricAverages.naturalness[model.id] = { name: model.name, total: 0, count: 0 };
+                        }
+                        metricAverages.naturalness[model.id].total += model.metrics.naturalness.mean;
+                        metricAverages.naturalness[model.id].count++;
+
+                        // Correctness
+                        if (!metricAverages.correctness[model.id]) {
+                            metricAverages.correctness[model.id] = { name: model.name, total: 0, count: 0 };
+                        }
+                        metricAverages.correctness[model.id].total += model.metrics.correctness.mean;
+                        metricAverages.correctness[model.id].count++;
+
+                        // Critical Error % (lower is better)
+                        if (!metricAverages.critical_error[model.id]) {
+                            metricAverages.critical_error[model.id] = { name: model.name, total: 0, count: 0 };
+                        }
+                        metricAverages.critical_error[model.id].total += model.metrics.critical_error.mean;
+                        metricAverages.critical_error[model.id].count++;
+                    });
+                });
+
+                // Find leaders for each metric
+                Object.keys(metricAverages).forEach(metricKey => {
+                    const averages = Object.values(metricAverages[metricKey]).map(stat => ({
+                        name: stat.name,
+                        avg: stat.total / stat.count
+                    }));
+
+                    if (metricKey === 'critical_error') {
+                        // Lower is better
+                        const leader = _.minBy(averages, 'avg');
+                        if (leader) {
+                            metricLeaders[metricKey] = { name: leader.name, score: leader.avg };
+                        }
+                    } else {
+                        // Higher is better
+                        const leader = _.maxBy(averages, 'avg');
+                        if (leader) {
+                            metricLeaders[metricKey] = { name: leader.name, score: leader.avg };
+                        }
+                    }
+                });
+
                 // 2. Calculate language wins per model
                 const modelWins = {};
 
@@ -117,10 +186,10 @@ function LandingPage({ theme, toggleTheme }) {
                     }
                 });
 
-                // Get top 2 models by language wins
+                // Get top 3 models by language wins
                 const topByWins = Object.values(modelWins)
                     .sort((a, b) => b.wins - a.wins)
-                    .slice(0, 2)
+                    .slice(0, 3)
                     .map(model => ({
                         name: model.name,
                         wins: model.wins
@@ -132,7 +201,25 @@ function LandingPage({ theme, toggleTheme }) {
                         name: overallLeader.name,
                         avgScore: (overallLeader.totalScore / overallLeader.count).toFixed(2)
                     } : null,
-                    topByWins: topByWins
+                    topByWins: topByWins,
+                    metricLeaders: {
+                        clarity: metricLeaders.clarity.name ? {
+                            name: metricLeaders.clarity.name,
+                            score: metricLeaders.clarity.score.toFixed(2)
+                        } : null,
+                        naturalness: metricLeaders.naturalness.name ? {
+                            name: metricLeaders.naturalness.name,
+                            score: metricLeaders.naturalness.score.toFixed(2)
+                        } : null,
+                        correctness: metricLeaders.correctness.name ? {
+                            name: metricLeaders.correctness.name,
+                            score: metricLeaders.correctness.score.toFixed(2)
+                        } : null,
+                        critical_error: metricLeaders.critical_error.name ? {
+                            name: metricLeaders.critical_error.name,
+                            score: metricLeaders.critical_error.score.toFixed(2)
+                        } : null
+                    }
                 });
                 setLoadingPreview(false);
             }).catch(err => {
@@ -669,6 +756,132 @@ function LandingPage({ theme, toggleTheme }) {
                                             }}>
                                                 Highest average score across all languages: {previewData.overallLeader.avgScore}
                                             </p>
+                                        </div>
+                                    )}
+
+                                    {/* Leaders by Metric */}
+                                    {previewData.metricLeaders && (
+                                        <div style={{
+                                            backgroundColor: 'var(--bg-panel)',
+                                            border: '1px solid var(--border-color)',
+                                            borderRadius: '0.5rem',
+                                            padding: '1rem',
+                                            marginBottom: '1rem'
+                                        }}>
+                                            <p style={{
+                                                fontSize: '0.875rem',
+                                                color: 'var(--text-primary)',
+                                                marginBottom: '0.75rem',
+                                                fontWeight: 600
+                                            }}>
+                                                📈 Leaders by Metric
+                                            </p>
+                                            <div style={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '0.5rem'
+                                            }}>
+                                                {previewData.metricLeaders.clarity && (
+                                                    <div style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'space-between',
+                                                        padding: '0.5rem 0.75rem',
+                                                        backgroundColor: 'var(--bg-card)',
+                                                        border: '1px solid var(--border-color)',
+                                                        borderRadius: '0.375rem'
+                                                    }}>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            color: 'var(--text-secondary)'
+                                                        }}>
+                                                            Clarity:
+                                                        </span>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            color: 'var(--text-primary)'
+                                                        }}>
+                                                            {previewData.metricLeaders.clarity.name} ({previewData.metricLeaders.clarity.score})
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                {previewData.metricLeaders.naturalness && (
+                                                    <div style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'space-between',
+                                                        padding: '0.5rem 0.75rem',
+                                                        backgroundColor: 'var(--bg-card)',
+                                                        border: '1px solid var(--border-color)',
+                                                        borderRadius: '0.375rem'
+                                                    }}>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            color: 'var(--text-secondary)'
+                                                        }}>
+                                                            Naturalness:
+                                                        </span>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            color: 'var(--text-primary)'
+                                                        }}>
+                                                            {previewData.metricLeaders.naturalness.name} ({previewData.metricLeaders.naturalness.score})
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                {previewData.metricLeaders.correctness && (
+                                                    <div style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'space-between',
+                                                        padding: '0.5rem 0.75rem',
+                                                        backgroundColor: 'var(--bg-card)',
+                                                        border: '1px solid var(--border-color)',
+                                                        borderRadius: '0.375rem'
+                                                    }}>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            color: 'var(--text-secondary)'
+                                                        }}>
+                                                            Correctness:
+                                                        </span>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            color: 'var(--text-primary)'
+                                                        }}>
+                                                            {previewData.metricLeaders.correctness.name} ({previewData.metricLeaders.correctness.score})
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                {previewData.metricLeaders.critical_error && (
+                                                    <div style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'space-between',
+                                                        padding: '0.5rem 0.75rem',
+                                                        backgroundColor: 'var(--bg-card)',
+                                                        border: '1px solid var(--border-color)',
+                                                        borderRadius: '0.375rem'
+                                                    }}>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            color: 'var(--text-secondary)'
+                                                        }}>
+                                                            Critical Error (%):
+                                                        </span>
+                                                        <span style={{
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            color: 'var(--text-primary)'
+                                                        }}>
+                                                            {previewData.metricLeaders.critical_error.name} ({previewData.metricLeaders.critical_error.score}%)
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     )}
 

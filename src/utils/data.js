@@ -44,6 +44,79 @@ export const getProvider = (modelName) => {
   return 'other';
 };
 
+// Normalize language names to handle inconsistencies
+const normalizeLanguageName = (langName) => {
+  if (!langName) return langName;
+  
+  // Handle "NigerianPidgin" -> "Nigerian Pidgin"
+  const normalized = langName
+    .replace(/NigerianPidgin/gi, 'Nigerian Pidgin')
+    .replace(/nigerianpidgin/gi, 'Nigerian Pidgin');
+  
+  return normalized;
+};
+
+// Normalize model names to handle variations and match MODEL_ORDER format
+const normalizeModelName = (modelName) => {
+  if (!modelName) return modelName;
+  
+  let normalized = String(modelName).trim().toLowerCase();
+  
+  // Normalize separators: spaces and underscores to dashes
+  normalized = normalized.replace(/[\s_]+/g, '-');
+  
+  // Remove dates (YYYY-MM-DD format like 2025-04-14, 2025-12-11)
+  normalized = normalized.replace(/[\-]?\d{4}[\-]?\d{2}[\-]?\d{2}/g, '');
+  
+  // Remove 8-digit dates (like 20241022, 20250414, 20251211)
+  normalized = normalized.replace(/[\-]?\d{8}/g, '');
+  
+  // Remove standalone version numbers (v1, v2, etc.) - only if standalone (preceded/followed by dash or end)
+  normalized = normalized.replace(/[\-]v\d+[\-]?/g, '-'); // Remove -v1-, -v2-, etc.
+  normalized = normalized.replace(/[\-]v\d+$/g, ''); // Remove trailing -v1, -v2, etc.
+  normalized = normalized.replace(/^v\d+[\-]/g, ''); // Remove leading v1-, v2-, etc.
+  
+  // Normalize GPT model variations
+  // GPT-4.1 variations (with or without dates) -> gpt-4.1
+  if (/gpt[\s\-]?4\.1/i.test(normalized)) {
+    return 'gpt-4.1';
+  }
+  
+  // GPT-5.2 variations (with or without dates) -> gpt-5.2
+  if (/gpt[\s\-]?5\.2/i.test(normalized)) {
+    return 'gpt-5.2';
+  }
+  
+  // GPT-5.1 variations (with or without dates) -> gpt-5.1
+  if (/gpt[\s\-]?5\.1/i.test(normalized)) {
+    return 'gpt-5.1';
+  }
+  
+  // GPT-5 variations (base model, with or without dates) -> gpt-5
+  if (/gpt[\s\-]?5(?![\d\.])/i.test(normalized)) {
+    // Check it's not gpt-5.1, gpt-5.2, gpt-5-nano, gpt-5-mini
+    if (!/gpt[\s\-]?5[\-\.](1|2|nano|mini)/i.test(normalized)) {
+      return 'gpt-5';
+    }
+  }
+  
+  // GPT-5-nano variations -> gpt-5-nano
+  if (/gpt[\s\-]?5[\s\-]?nano/i.test(normalized)) {
+    return 'gpt-5-nano';
+  }
+  
+  // GPT-5-mini variations -> gpt-5-mini
+  if (/gpt[\s\-]?5[\s\-]?mini/i.test(normalized)) {
+    return 'gpt-5-mini';
+  }
+  
+  // Clean up multiple consecutive dashes
+  normalized = normalized.replace(/\-+/g, '-');
+  normalized = normalized.replace(/^\-+|\-+$/g, ''); // Remove leading/trailing dashes
+  
+  return normalized.trim();
+};
+
 const getModelColor = (modelName, index, groupIndex) => {
   const type = getProvider(modelName);
 
@@ -53,16 +126,54 @@ const getModelColor = (modelName, index, groupIndex) => {
 };
 
 const formatModelName = (modelName) => {
-  return modelName
-    .replace(/bedrock-/i, '')
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, c => c.toUpperCase())
-    .replace(/Claude 3 5/i, 'Claude 3.5')
-    .replace(/Gpt 4/i, 'GPT-4')
-    .replace(/Gpt 4o/i, 'GPT-4o')
-    .replace(/\d{8}/g, '') // Remove 8-digit dates like 20241022
-    .replace(/v\d+/i, '') // Remove version numbers like v1, v2 if standalone
-    .trim();
+  if (!modelName) return modelName;
+  
+  let formatted = String(modelName);
+  
+  // Remove bedrock- prefix
+  formatted = formatted.replace(/bedrock-/i, '');
+  
+  // Remove dates (YYYY-MM-DD format like 2025-04-14, 2025-12-11)
+  formatted = formatted.replace(/[\-]?\d{4}[\-]?\d{2}[\-]?\d{2}/g, '');
+  
+  // Remove 8-digit dates (like 20241022, 20250414, 20251211)
+  formatted = formatted.replace(/[\-]?\d{8}/g, '');
+  
+  // Remove standalone version numbers (v1, v2, etc.)
+  formatted = formatted.replace(/[\-]v\d+[\-]?/gi, '-'); // Remove -v1-, -v2-, etc.
+  formatted = formatted.replace(/[\-]v\d+$/gi, ''); // Remove trailing -v1, -v2, etc.
+  formatted = formatted.replace(/^v\d+[\-]/gi, ''); // Remove leading v1-, v2-, etc.
+  
+  // Convert to space-separated
+  formatted = formatted.replace(/-/g, ' ');
+  
+  // Capitalize GPT references consistently BEFORE general capitalization
+  formatted = formatted.replace(/\bgpt\b/gi, 'GPT');
+  
+  // Handle specific model name formatting with capitalization
+  formatted = formatted.replace(/\b\w/g, c => c.toUpperCase());
+  
+  // Fix specific model names (after capitalization)
+  formatted = formatted.replace(/Claude 3 5/gi, 'Claude 3.5');
+  
+  // Fix GPT model formatting
+  formatted = formatted.replace(/GPT 4 1/gi, 'GPT-4.1');
+  formatted = formatted.replace(/GPT 4(?![\d\.o])/gi, 'GPT-4'); // GPT 4 (not GPT 4.1 or GPT 4o)
+  formatted = formatted.replace(/GPT 4o/gi, 'GPT-4o');
+  formatted = formatted.replace(/GPT 5(?![\d\.\s])/gi, 'GPT-5'); // GPT 5 (not GPT 5.1, 5.2, etc.)
+  formatted = formatted.replace(/GPT 5 1/gi, 'GPT-5.1');
+  formatted = formatted.replace(/GPT 5 2/gi, 'GPT-5.2');
+  formatted = formatted.replace(/GPT 5 Nano/gi, 'GPT-5 Nano');
+  formatted = formatted.replace(/GPT 5 Mini/gi, 'GPT-5 Mini');
+  
+  // Fix Gemini model formatting (ensure proper capitalization)
+  formatted = formatted.replace(/Gemini 2 5/gi, 'Gemini 2.5');
+  formatted = formatted.replace(/Gemini 3/gi, 'Gemini 3');
+  
+  // Clean up extra spaces
+  formatted = formatted.replace(/\s+/g, ' ').trim();
+  
+  return formatted;
 };
 
 export const loadData = async (source = 'primary') => {
@@ -86,10 +197,19 @@ export const loadData = async (source = 'primary') => {
       row.clarity_score = parseFloat(row.clarity_score);
       row.naturalness_score = parseFloat(row.naturalness_score);
       row.correctness_score = parseFloat(row.correctness_score);
+      row.has_critical_error = parseInt(row.has_critical_error) || 0;
 
       // Fallback for language name if missing in CSV
       if (!row.target_language_name) {
         row.target_language_name = capitalizedLang;
+      }
+      
+      // Normalize language name
+      row.target_language_name = normalizeLanguageName(row.target_language_name);
+      
+      // Normalize model name
+      if (row.model) {
+        row.model = normalizeModelName(row.model);
       }
 
       allData.push(row);
@@ -111,17 +231,27 @@ const MODEL_ORDER = [
   'gemini-2.5-flash-lite',
   'gemini-2.5-flash',
   'gemini-2.5-pro',
+  'gemini-3-flash-preview',
   'gemini-3-pro-preview',
 
   // OpenAI (oldest to newest)
-  'gpt-4.1',      // Apr 2025
+  'gpt-4.1',      // Apr 2025 (without date suffix)
   'gpt-5-nano',   // Smaller/older variant
   'gpt-5-mini',   // Medium variant
   'gpt-5',        // Base model
-  'gpt-5.1'       // Latest variant
+  'gpt-5.1',      // Nov 2025
+  'gpt-5.2'       // Dec 2025
 ];
 
 const processData = (data) => {
+  // Normalize all data before grouping
+  data.forEach(row => {
+    row.target_language_name = normalizeLanguageName(row.target_language_name);
+    if (row.model) {
+      row.model = normalizeModelName(row.model);
+    }
+  });
+  
   // Group by Language -> Model
   const grouped = _.groupBy(data, 'target_language_name');
 
@@ -130,10 +260,6 @@ const processData = (data) => {
     const models = _.groupBy(rows, 'model');
 
     let modelStats = Object.keys(models)
-      .filter((modelKey) => {
-        // Filter out Google models for Round 3
-        return !MODEL_PATTERNS.google.test(modelKey);
-      })
       .map((modelKey) => {
       const modelRows = models[modelKey];
 
@@ -152,6 +278,7 @@ const processData = (data) => {
           clarity: calculateStats(modelRows, 'clarity_score'),
           naturalness: calculateStats(modelRows, 'naturalness_score'),
           correctness: calculateStats(modelRows, 'correctness_score'),
+          critical_error: calculateCriticalErrorPct(modelRows),
         }
       };
       return stats;
@@ -169,10 +296,12 @@ const processData = (data) => {
     });
 
     // Find winners
+    // For critical_error, lower is better (min), for others higher is better (max)
     const winners = {
       clarity: _.maxBy(modelStats, m => m.metrics.clarity.mean),
       naturalness: _.maxBy(modelStats, m => m.metrics.naturalness.mean),
       correctness: _.maxBy(modelStats, m => m.metrics.correctness.mean),
+      critical_error: _.minBy(modelStats, m => m.metrics.critical_error.mean),
     };
 
     return {
@@ -209,5 +338,26 @@ const calculateStats = (rows, field) => {
     mean,
     stdDev,
     count: values.length
+  };
+};
+
+const calculateCriticalErrorPct = (rows) => {
+  if (!rows || rows.length === 0) return { mean: 0, stdDev: 0, count: 0 };
+  
+  const total = rows.length;
+  const withErrors = rows.filter(r => r.has_critical_error === 1 || r.has_critical_error === '1').length;
+  const percentage = (withErrors / total) * 100;
+  
+  // For percentage metrics, stdDev is calculated as the standard deviation of the percentage
+  // Since we're calculating a single percentage from the data, we can use a simple approach
+  // For a percentage, the stdDev would be based on the variance of the binary outcomes
+  const p = percentage / 100;
+  const variance = p * (1 - p);
+  const stdDev = Math.sqrt(variance) * 100; // Convert back to percentage
+  
+  return {
+    mean: percentage,
+    stdDev: stdDev,
+    count: total
   };
 };
