@@ -56,6 +56,17 @@ const normalizeLanguageName = (langName) => {
   return normalized;
 };
 
+// Canonicalize model IDs for known aliases (keep raw IDs otherwise)
+const getCanonicalModelId = (modelId) => {
+  if (!modelId) return modelId;
+
+  const aliases = {
+    'gpt-4.1-2025-04-14': 'gpt-4.1',
+  };
+
+  return aliases[modelId] || modelId;
+};
+
 const getModelColor = (modelName, index, groupIndex) => {
   const type = getProvider(modelName);
 
@@ -145,7 +156,12 @@ export const loadData = async (source = 'primary') => {
       
       // Normalize language name
       row.target_language_name = normalizeLanguageName(row.target_language_name);
-      
+
+      // Canonicalize known model aliases (e.g., dated GPT-4.1)
+      if (row.model) {
+        row.model = getCanonicalModelId(row.model);
+      }
+
       allData.push(row);
     });
   });
