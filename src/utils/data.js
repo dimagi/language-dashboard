@@ -169,12 +169,13 @@ const MODEL_ORDER = [
   'gemini-3-pro-preview',
 
   // OpenAI (oldest to newest)
-  'gpt-4.1',      // Apr 2025 (without date suffix)
-  'gpt-5-nano',   // Smaller/older variant
-  'gpt-5-mini',   // Medium variant
-  'gpt-5',        // Base model
-  'gpt-5.1',      // Nov 2025
-  'gpt-5.2'       // Dec 2025
+  'gpt-4.1',             // Apr 2025 (without date suffix)
+  'gpt-4.1-2025-04-14',  // Apr 2025 (with date suffix)
+  'gpt-5-nano',          // Smaller/older variant
+  'gpt-5-mini',          // Medium variant
+  'gpt-5',               // Base model
+  'gpt-5.1',             // Nov 2025
+  'gpt-5.2-2025-12-11'   // Dec 2025 (with date suffix)
 ];
 
 const processData = (data) => {
