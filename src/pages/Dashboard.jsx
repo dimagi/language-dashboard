@@ -15,7 +15,7 @@ function Dashboard({ theme, toggleTheme }) {
     // Read URL params on initial mount to set initial state
     const initialParams = getURLParams();
     const [dataSource, setDataSource] = useState(initialParams.source === 'secondary' ? 'secondary' : 'primary');
-    const [metric, setMetric] = useState(initialParams.metric && ['clarity', 'naturalness', 'correctness'].includes(initialParams.metric) ? initialParams.metric : 'clarity');
+    const [metric, setMetric] = useState(initialParams.metric && ['clarity', 'naturalness', 'correctness', 'critical_error'].includes(initialParams.metric) ? initialParams.metric : 'clarity');
     
     const [visibleModels, setVisibleModels] = useState(new Set());
     const [allModels, setAllModels] = useState([]);
@@ -146,7 +146,7 @@ function Dashboard({ theme, toggleTheme }) {
         const params = getURLParams();
         
         // Read metric from URL (only if different from current)
-        if (params.metric && ['clarity', 'naturalness', 'correctness'].includes(params.metric)) {
+        if (params.metric && ['clarity', 'naturalness', 'correctness', 'critical_error'].includes(params.metric)) {
             setMetric(prev => prev !== params.metric ? params.metric : prev);
         }
         
@@ -401,6 +401,11 @@ function Dashboard({ theme, toggleTheme }) {
             };
         });
 
+        // For critical_error, lower is better (min), for others higher is better (max)
+        if (metric === 'critical_error') {
+            return _.minBy(averages, 'avgScore');
+        }
+        
         return _.maxBy(averages, 'avgScore');
     }, [filteredData, metric, visibleModels]);
 

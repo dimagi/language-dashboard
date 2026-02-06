@@ -7,7 +7,8 @@ import { updateURLParams } from '../utils/urlParams';
 const METRIC_DEFINITIONS = {
     clarity: 'Measures how easy it is to read and understand the generated text. Higher scores indicate clearer and more comprehensible sentences.',
     naturalness: 'Evaluates whether the sentence sounds natural and authentic, as if spoken by a native speaker in everyday conversation. Higher scores indicate more natural-sounding text.',
-    correctness: 'Assesses the technical accuracy of the text, including spelling, grammar, verb tenses, and other linguistic rules. Higher scores indicate fewer errors and better adherence to language standards.'
+    correctness: 'Assesses the technical accuracy of the text, including spelling, grammar, verb tenses, and other linguistic rules. Higher scores indicate fewer errors and better adherence to language standards.',
+    critical_error: 'The percentage of sentences containing critical errors that significantly impact meaning, readability, or quality. Lower percentages are better, as they indicate fewer serious mistakes that distort the original message or context.'
 };
 
 const Controls = ({
@@ -109,7 +110,8 @@ const Controls = ({
             // CSV export
             const headers = ['language', 'model', 'clarity_mean', 'clarity_stdDev', 'clarity_count', 
                 'naturalness_mean', 'naturalness_stdDev', 'naturalness_count',
-                'correctness_mean', 'correctness_stdDev', 'correctness_count'];
+                'correctness_mean', 'correctness_stdDev', 'correctness_count',
+                'critical_error_mean', 'critical_error_stdDev', 'critical_error_count'];
             const rows = data.flatMap(lang => 
                 lang.models.map(model => [
                     lang.language,
@@ -122,7 +124,10 @@ const Controls = ({
                     model.metrics.naturalness.count,
                     model.metrics.correctness.mean,
                     model.metrics.correctness.stdDev,
-                    model.metrics.correctness.count
+                    model.metrics.correctness.count,
+                    model.metrics.critical_error.mean,
+                    model.metrics.critical_error.stdDev,
+                    model.metrics.critical_error.count
                 ])
             );
             const csvContent = [
@@ -210,8 +215,8 @@ const Controls = ({
                 <div className="flex items-center justify-between gap-4" style={{ flexWrap: 'wrap' }}>
 
                     {/* Metric Tabs */}
-                    <div className="flex" style={{ backgroundColor: 'var(--bg-card)', padding: '0.25rem', borderRadius: '0.5rem' }}>
-                        {['clarity', 'naturalness', 'correctness'].map(m => (
+                    <div className="flex" style={{ backgroundColor: 'var(--bg-card)', padding: '0.25rem', borderRadius: '0.5rem', flexWrap: 'wrap' }}>
+                        {['clarity', 'naturalness', 'correctness', 'critical_error'].map(m => (
                             <button
                                 key={m}
                                 onClick={() => {
@@ -226,7 +231,7 @@ const Controls = ({
                                 title={METRIC_DEFINITIONS[m]}
                                 style={{ position: 'relative' }}
                             >
-                                {m.charAt(0).toUpperCase() + m.slice(1)}
+                                {m === 'critical_error' ? 'Critical Error (%)' : m.charAt(0).toUpperCase() + m.slice(1)}
                             </button>
                         ))}
                     </div>

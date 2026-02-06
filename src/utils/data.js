@@ -44,6 +44,29 @@ export const getProvider = (modelName) => {
   return 'other';
 };
 
+// Normalize language names to handle inconsistencies
+const normalizeLanguageName = (langName) => {
+  if (!langName) return langName;
+  
+  // Handle "NigerianPidgin" -> "Nigerian Pidgin"
+  const normalized = langName
+    .replace(/NigerianPidgin/gi, 'Nigerian Pidgin')
+    .replace(/nigerianpidgin/gi, 'Nigerian Pidgin');
+  
+  return normalized;
+};
+
+// Canonicalize model IDs for known aliases (keep raw IDs otherwise)
+const getCanonicalModelId = (modelId) => {
+  if (!modelId) return modelId;
+
+  const aliases = {
+    'gpt-4.1-2025-04-14': 'gpt-4.1',
+  };
+
+  return aliases[modelId] || modelId;
+};
+
 const getModelColor = (modelName, index, groupIndex) => {
   const type = getProvider(modelName);
 
@@ -53,16 +76,54 @@ const getModelColor = (modelName, index, groupIndex) => {
 };
 
 const formatModelName = (modelName) => {
-  return modelName
-    .replace(/bedrock-/i, '')
-    .replace(/-\d{4}-\d{2}-\d{2}/g, '') // Remove YYYY-MM-DD dates like 2025-04-14
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, c => c.toUpperCase())
-    .replace(/Claude 3 5/i, 'Claude 3.5')
-    .replace(/Gpt/gi, 'GPT') // Capitalize all GPT references
-    .replace(/\d{8}/g, '') // Remove 8-digit dates like 20241022
-    .replace(/v\d+/i, '') // Remove version numbers like v1, v2 if standalone
-    .trim();
+  if (!modelName) return modelName;
+  
+  let formatted = String(modelName);
+  
+  // Remove bedrock- prefix
+  formatted = formatted.replace(/bedrock-/i, '');
+  
+  // Remove dates (YYYY-MM-DD format like 2025-04-14, 2025-12-11)
+  formatted = formatted.replace(/[\-]?\d{4}[\-]?\d{2}[\-]?\d{2}/g, '');
+  
+  // Remove 8-digit dates (like 20241022, 20250414, 20251211)
+  formatted = formatted.replace(/[\-]?\d{8}/g, '');
+  
+  // Remove standalone version numbers (v1, v2, etc.)
+  formatted = formatted.replace(/[\-]v\d+[\-]?/gi, '-'); // Remove -v1-, -v2-, etc.
+  formatted = formatted.replace(/[\-]v\d+$/gi, ''); // Remove trailing -v1, -v2, etc.
+  formatted = formatted.replace(/^v\d+[\-]/gi, ''); // Remove leading v1-, v2-, etc.
+  
+  // Convert to space-separated
+  formatted = formatted.replace(/-/g, ' ');
+  
+  // Capitalize GPT references consistently BEFORE general capitalization
+  formatted = formatted.replace(/\bgpt\b/gi, 'GPT');
+  
+  // Handle specific model name formatting with capitalization
+  formatted = formatted.replace(/\b\w/g, c => c.toUpperCase());
+  
+  // Fix specific model names (after capitalization)
+  formatted = formatted.replace(/Claude 3 5/gi, 'Claude 3.5');
+  
+  // Fix GPT model formatting
+  formatted = formatted.replace(/GPT 4 1/gi, 'GPT-4.1');
+  formatted = formatted.replace(/GPT 4(?![\d\.o])/gi, 'GPT-4'); // GPT 4 (not GPT 4.1 or GPT 4o)
+  formatted = formatted.replace(/GPT 4o/gi, 'GPT-4o');
+  formatted = formatted.replace(/GPT 5(?![\d\.\s])/gi, 'GPT-5'); // GPT 5 (not GPT 5.1, 5.2, etc.)
+  formatted = formatted.replace(/GPT 5 1/gi, 'GPT-5.1');
+  formatted = formatted.replace(/GPT 5 2/gi, 'GPT-5.2');
+  formatted = formatted.replace(/GPT 5 Nano/gi, 'GPT-5 Nano');
+  formatted = formatted.replace(/GPT 5 Mini/gi, 'GPT-5 Mini');
+  
+  // Fix Gemini model formatting (ensure proper capitalization)
+  formatted = formatted.replace(/Gemini 2 5/gi, 'Gemini 2.5');
+  formatted = formatted.replace(/Gemini 3/gi, 'Gemini 3');
+  
+  // Clean up extra spaces
+  formatted = formatted.replace(/\s+/g, ' ').trim();
+  
+  return formatted;
 };
 
 export const loadData = async (source = 'primary') => {
@@ -86,15 +147,19 @@ export const loadData = async (source = 'primary') => {
       row.clarity_score = parseFloat(row.clarity_score);
       row.naturalness_score = parseFloat(row.naturalness_score);
       row.correctness_score = parseFloat(row.correctness_score);
+      row.has_critical_error = parseInt(row.has_critical_error) || 0;
 
       // Fallback for language name if missing in CSV
       if (!row.target_language_name) {
         row.target_language_name = capitalizedLang;
       }
+      
+      // Normalize language name
+      row.target_language_name = normalizeLanguageName(row.target_language_name);
 
-      // Normalize language names (fix inconsistent naming like "NigerianPidgin" -> "Nigerian Pidgin")
-      if (row.target_language_name === 'NigerianPidgin') {
-        row.target_language_name = 'Nigerian Pidgin';
+      // Canonicalize known model aliases (e.g., dated GPT-4.1)
+      if (row.model) {
+        row.model = getCanonicalModelId(row.model);
       }
 
       allData.push(row);
@@ -126,7 +191,7 @@ const MODEL_ORDER = [
   'gpt-5-mini',          // Medium variant
   'gpt-5',               // Base model
   'gpt-5.1',             // Nov 2025
-  'gpt-5.2-2025-12-11'   // Dec 2025
+  'gpt-5.2-2025-12-11'   // Dec 2025 (with date suffix)
 ];
 
 const processData = (data) => {
@@ -156,6 +221,7 @@ const processData = (data) => {
           clarity: calculateStats(modelRows, 'clarity_score'),
           naturalness: calculateStats(modelRows, 'naturalness_score'),
           correctness: calculateStats(modelRows, 'correctness_score'),
+          critical_error: calculateCriticalErrorPct(modelRows),
         }
       };
       return stats;
@@ -173,10 +239,12 @@ const processData = (data) => {
     });
 
     // Find winners
+    // For critical_error, lower is better (min), for others higher is better (max)
     const winners = {
       clarity: _.maxBy(modelStats, m => m.metrics.clarity.mean),
       naturalness: _.maxBy(modelStats, m => m.metrics.naturalness.mean),
       correctness: _.maxBy(modelStats, m => m.metrics.correctness.mean),
+      critical_error: _.minBy(modelStats, m => m.metrics.critical_error.mean),
     };
 
     return {
@@ -213,5 +281,26 @@ const calculateStats = (rows, field) => {
     mean,
     stdDev,
     count: values.length
+  };
+};
+
+const calculateCriticalErrorPct = (rows) => {
+  if (!rows || rows.length === 0) return { mean: 0, stdDev: 0, count: 0 };
+  
+  const total = rows.length;
+  const withErrors = rows.filter(r => r.has_critical_error === 1 || r.has_critical_error === '1').length;
+  const percentage = (withErrors / total) * 100;
+  
+  // For percentage metrics, stdDev is calculated as the standard deviation of the percentage
+  // Since we're calculating a single percentage from the data, we can use a simple approach
+  // For a percentage, the stdDev would be based on the variance of the binary outcomes
+  const p = percentage / 100;
+  const variance = p * (1 - p);
+  const stdDev = Math.sqrt(variance) * 100; // Convert back to percentage
+  
+  return {
+    mean: percentage,
+    stdDev: stdDev,
+    count: total
   };
 };

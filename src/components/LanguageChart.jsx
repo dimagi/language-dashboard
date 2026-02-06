@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Link, Copy, Check } from 'lucide-react';
 import _ from 'lodash';
 
-const CustomTooltip = ({ active, payload, label, theme }) => {
+const CustomTooltip = ({ active, payload, label, theme, isPercentage }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload;
         const bgColor = theme === 'light' ? '#ffffff' : '#1e293b';
@@ -15,9 +15,9 @@ const CustomTooltip = ({ active, payload, label, theme }) => {
             <div className="tooltip-custom" style={{ backgroundColor: bgColor, borderColor: borderColor, color: textColor }}>
                 <p style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>{data.name}</p>
                 <p style={{ fontSize: '0.875rem' }}>
-                    Score: <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: '#60a5fa' }}>{data.value.toFixed(2)}</span>
+                    Score: <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: '#60a5fa' }}>{data.value.toFixed(2)}{isPercentage ? '%' : ''}</span>
                 </p>
-                <p style={{ fontSize: '0.75rem', color: secondaryText }}>Std Dev: {data.error.toFixed(2)}</p>
+                <p style={{ fontSize: '0.75rem', color: secondaryText }}>Std Dev: {data.error.toFixed(2)}{isPercentage ? '%' : ''}</p>
                 <p style={{ fontSize: '0.75rem', color: secondaryText }}>Samples: {data.count}</p>
             </div>
         );
@@ -67,6 +67,8 @@ const LanguageChart = ({ language, data, metric, visibleModels, theme, id, curre
 
     // Do NOT re-sort here. Respect the order from data.models which is already sorted by MODEL_ORDER.
     const sortedData = chartData;
+    const isPercentage = metric === 'critical_error';
+    const domain = isPercentage ? [0, 100] : [1, 7];
     const textColor = theme === 'light' ? '#475569' : '#94a3b8';
     const gridColor = theme === 'light' ? '#e2e8f0' : '#334155';
 
@@ -118,13 +120,14 @@ const LanguageChart = ({ language, data, metric, visibleModels, theme, id, curre
                             height={60}
                         />
                         <YAxis
-                            domain={[1, 7]}
+                            domain={domain}
                             tick={{ fill: textColor, fontSize: 12 }}
-                            tickCount={7}
+                            tickCount={isPercentage ? 11 : 7}
                             allowDataOverflow={true}
+                            label={isPercentage ? { value: '%', angle: -90, position: 'insideLeft', style: { fill: textColor } } : undefined}
                         />
                         <Tooltip
-                            content={<CustomTooltip theme={theme} />}
+                            content={<CustomTooltip theme={theme} isPercentage={isPercentage} />}
                             cursor={{ fill: theme === 'light' ? '#f1f5f9' : '#1e293b' }}
                         />
                         <Bar dataKey="value" isAnimationActive={true} minPointSize={5}>
