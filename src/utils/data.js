@@ -56,67 +56,6 @@ const normalizeLanguageName = (langName) => {
   return normalized;
 };
 
-// Normalize model names to handle variations and match MODEL_ORDER format
-const normalizeModelName = (modelName) => {
-  if (!modelName) return modelName;
-  
-  let normalized = String(modelName).trim().toLowerCase();
-  
-  // Normalize separators: spaces and underscores to dashes
-  normalized = normalized.replace(/[\s_]+/g, '-');
-  
-  // Remove dates (YYYY-MM-DD format like 2025-04-14, 2025-12-11)
-  normalized = normalized.replace(/[\-]?\d{4}[\-]?\d{2}[\-]?\d{2}/g, '');
-  
-  // Remove 8-digit dates (like 20241022, 20250414, 20251211)
-  normalized = normalized.replace(/[\-]?\d{8}/g, '');
-  
-  // Remove standalone version numbers (v1, v2, etc.) - only if standalone (preceded/followed by dash or end)
-  normalized = normalized.replace(/[\-]v\d+[\-]?/g, '-'); // Remove -v1-, -v2-, etc.
-  normalized = normalized.replace(/[\-]v\d+$/g, ''); // Remove trailing -v1, -v2, etc.
-  normalized = normalized.replace(/^v\d+[\-]/g, ''); // Remove leading v1-, v2-, etc.
-  
-  // Normalize GPT model variations
-  // GPT-4.1 variations (with or without dates) -> gpt-4.1
-  if (/gpt[\s\-]?4\.1/i.test(normalized)) {
-    return 'gpt-4.1';
-  }
-  
-  // GPT-5.2 variations (with or without dates) -> gpt-5.2
-  if (/gpt[\s\-]?5\.2/i.test(normalized)) {
-    return 'gpt-5.2';
-  }
-  
-  // GPT-5.1 variations (with or without dates) -> gpt-5.1
-  if (/gpt[\s\-]?5\.1/i.test(normalized)) {
-    return 'gpt-5.1';
-  }
-  
-  // GPT-5 variations (base model, with or without dates) -> gpt-5
-  if (/gpt[\s\-]?5(?![\d\.])/i.test(normalized)) {
-    // Check it's not gpt-5.1, gpt-5.2, gpt-5-nano, gpt-5-mini
-    if (!/gpt[\s\-]?5[\-\.](1|2|nano|mini)/i.test(normalized)) {
-      return 'gpt-5';
-    }
-  }
-  
-  // GPT-5-nano variations -> gpt-5-nano
-  if (/gpt[\s\-]?5[\s\-]?nano/i.test(normalized)) {
-    return 'gpt-5-nano';
-  }
-  
-  // GPT-5-mini variations -> gpt-5-mini
-  if (/gpt[\s\-]?5[\s\-]?mini/i.test(normalized)) {
-    return 'gpt-5-mini';
-  }
-  
-  // Clean up multiple consecutive dashes
-  normalized = normalized.replace(/\-+/g, '-');
-  normalized = normalized.replace(/^\-+|\-+$/g, ''); // Remove leading/trailing dashes
-  
-  return normalized.trim();
-};
-
 const getModelColor = (modelName, index, groupIndex) => {
   const type = getProvider(modelName);
 
@@ -207,11 +146,6 @@ export const loadData = async (source = 'primary') => {
       // Normalize language name
       row.target_language_name = normalizeLanguageName(row.target_language_name);
       
-      // Normalize model name
-      if (row.model) {
-        row.model = normalizeModelName(row.model);
-      }
-
       allData.push(row);
     });
   });
@@ -244,14 +178,6 @@ const MODEL_ORDER = [
 ];
 
 const processData = (data) => {
-  // Normalize all data before grouping
-  data.forEach(row => {
-    row.target_language_name = normalizeLanguageName(row.target_language_name);
-    if (row.model) {
-      row.model = normalizeModelName(row.model);
-    }
-  });
-  
   // Group by Language -> Model
   const grouped = _.groupBy(data, 'target_language_name');
 
